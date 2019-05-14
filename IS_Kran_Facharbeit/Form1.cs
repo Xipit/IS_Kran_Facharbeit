@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace IS_Kran_Facharbeit
 {
+
     public partial class Form1 : Form
     {
+        public bool nokiaAngeschaltet = false;
+        public bool nokiaBootAnim = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,26 +28,34 @@ namespace IS_Kran_Facharbeit
 
         private void NokiaAnAus_Click(object sender, EventArgs e)
         {
-            NokiaBootAnimStart();
+            if (nokiaAngeschaltet == false)
+            {
+                NokiaBootAnimStart();
+            }
+
+            if(nokiaBootAnim == false)
+                nokiaAngeschaltet = !nokiaAngeschaltet;
         }
 
         void NokiaBootAnimStart()
         {
+            nokiaBootAnim = true;
             NokiaBootAnimPictureBx.Enabled = true;
             NokiaBootTimer.Enabled = true;
+            nokiaAngeschaltet = true;
+
         }
 
         void NokiaBootAnimStop()
         {
             NokiaBootAnimPictureBx.Enabled = false;
             NokiaBootTimer.Enabled = false;
+            nokiaBootAnim = false;
         }
 
         private void NokiaBootTimer_Tick(object sender, EventArgs e)
         {
             NokiaBootAnimStop();
-
-            //MessageBox.Show()
         }
     }
 }

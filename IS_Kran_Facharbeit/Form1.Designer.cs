@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.KransteuerungPnl = new System.Windows.Forms.Panel();
+            this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NokiaAnAus = new System.Windows.Forms.Button();
             this.ProgrammsteuerungPnl = new System.Windows.Forms.Panel();
@@ -38,12 +39,11 @@
             this.ZuruecksetzenBtn = new System.Windows.Forms.Button();
             this.SchliessenBtn = new System.Windows.Forms.Button();
             this.KranPnl = new System.Windows.Forms.Panel();
-            this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
             this.NokiaBootTimer = new System.Windows.Forms.Timer(this.components);
             this.KransteuerungPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ProgrammsteuerungPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).BeginInit();
             this.SuspendLayout();
             // 
             // KransteuerungPnl
@@ -55,6 +55,17 @@
             this.KransteuerungPnl.Name = "KransteuerungPnl";
             this.KransteuerungPnl.Size = new System.Drawing.Size(293, 670);
             this.KransteuerungPnl.TabIndex = 0;
+            // 
+            // NokiaBootAnimPictureBx
+            // 
+            this.NokiaBootAnimPictureBx.Enabled = false;
+            this.NokiaBootAnimPictureBx.Image = ((System.Drawing.Image)(resources.GetObject("NokiaBootAnimPictureBx.Image")));
+            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(56, 220);
+            this.NokiaBootAnimPictureBx.Name = "NokiaBootAnimPictureBx";
+            this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(177, 344);
+            this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.NokiaBootAnimPictureBx.TabIndex = 0;
+            this.NokiaBootAnimPictureBx.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -122,17 +133,6 @@
             this.KranPnl.Size = new System.Drawing.Size(834, 599);
             this.KranPnl.TabIndex = 2;
             // 
-            // NokiaBootAnimPictureBx
-            // 
-            this.NokiaBootAnimPictureBx.Enabled = false;
-            this.NokiaBootAnimPictureBx.Image = ((System.Drawing.Image)(resources.GetObject("NokiaBootAnimPictureBx.Image")));
-            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(56, 220);
-            this.NokiaBootAnimPictureBx.Name = "NokiaBootAnimPictureBx";
-            this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(177, 344);
-            this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.NokiaBootAnimPictureBx.TabIndex = 0;
-            this.NokiaBootAnimPictureBx.TabStop = false;
-            // 
             // NokiaBootTimer
             // 
             this.NokiaBootTimer.Interval = 3900;
@@ -150,9 +150,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.KransteuerungPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ProgrammsteuerungPnl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).EndInit();
             this.ResumeLayout(false);
 
         }

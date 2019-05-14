@@ -59,5 +59,15 @@ namespace IS_Kran_Facharbeit
         {
             NokiaBootAnimStop();
         }
+
+        private void ZuruecksetzenBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InfoBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

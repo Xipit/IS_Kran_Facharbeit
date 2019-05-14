@@ -81,7 +81,7 @@
             // 
             // NokiaAnAus
             // 
-            this.NokiaAnAus.Location = new System.Drawing.Point(102, 37);
+            this.NokiaAnAus.Location = new System.Drawing.Point(98, 38);
             this.NokiaAnAus.Name = "NokiaAnAus";
             this.NokiaAnAus.Size = new System.Drawing.Size(83, 75);
             this.NokiaAnAus.TabIndex = 0;

@@ -110,6 +110,7 @@
             this.InfoBtn.TabIndex = 2;
             this.InfoBtn.Text = "Info";
             this.InfoBtn.UseVisualStyleBackColor = true;
+            this.InfoBtn.Click += new System.EventHandler(this.InfoBtn_Click);
             // 
             // ZuruecksetzenBtn
             // 
@@ -119,6 +120,7 @@
             this.ZuruecksetzenBtn.TabIndex = 1;
             this.ZuruecksetzenBtn.Text = "Zurücksetzen";
             this.ZuruecksetzenBtn.UseVisualStyleBackColor = true;
+            this.ZuruecksetzenBtn.Click += new System.EventHandler(this.ZuruecksetzenBtn_Click);
             // 
             // SchliessenBtn
             // 

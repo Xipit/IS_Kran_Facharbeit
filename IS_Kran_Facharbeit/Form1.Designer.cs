@@ -60,9 +60,9 @@
             // 
             this.NokiaBootAnimPictureBx.Enabled = false;
             this.NokiaBootAnimPictureBx.Image = ((System.Drawing.Image)(resources.GetObject("NokiaBootAnimPictureBx.Image")));
-            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(56, 220);
+            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(47, 200);
             this.NokiaBootAnimPictureBx.Name = "NokiaBootAnimPictureBx";
-            this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(177, 344);
+            this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(200, 363);
             this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NokiaBootAnimPictureBx.TabIndex = 0;
             this.NokiaBootAnimPictureBx.TabStop = false;
@@ -73,15 +73,15 @@
             this.pictureBox1.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.Nokia_Smartphone;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ErrorImage = global::IS_Kran_Facharbeit.Properties.Resources.Nokia_Smartphone;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 139);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 119);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(244, 497);
+            this.pictureBox1.Size = new System.Drawing.Size(267, 516);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // NokiaAnAus
             // 
-            this.NokiaAnAus.Location = new System.Drawing.Point(98, 38);
+            this.NokiaAnAus.Location = new System.Drawing.Point(102, 21);
             this.NokiaAnAus.Name = "NokiaAnAus";
             this.NokiaAnAus.Size = new System.Drawing.Size(83, 75);
             this.NokiaAnAus.TabIndex = 0;

@@ -59,15 +59,5 @@ namespace IS_Kran_Facharbeit
         {
             NokiaBootAnimStop();
         }
-
-        private void ZuruecksetzenBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void InfoBtn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Dieses Programm wurde von Hanno Witzleb und Eliah Lohr für den frein Gebrauch erstellt. \n\nCopyright Impulsm Entertainment 2019. See Impulsmentertainment.de", "Programinformationen");
-        }
     }
 }

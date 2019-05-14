@@ -39,6 +39,7 @@ namespace IS_Kran_Facharbeit
 
         void NokiaBootAnimStart()
         {
+            NokiaBootAnimPictureBx.Visible = true;
             nokiaBootAnim = true;
             NokiaBootAnimPictureBx.Enabled = true;
             NokiaBootTimer.Enabled = true;
@@ -51,6 +52,7 @@ namespace IS_Kran_Facharbeit
             NokiaBootAnimPictureBx.Enabled = false;
             NokiaBootTimer.Enabled = false;
             nokiaBootAnim = false;
+            NokiaBootAnimPictureBx.Visible = false;
         }
 
         private void NokiaBootTimer_Tick(object sender, EventArgs e)

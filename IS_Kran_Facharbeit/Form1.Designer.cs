@@ -66,6 +66,7 @@
             this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NokiaBootAnimPictureBx.TabIndex = 0;
             this.NokiaBootAnimPictureBx.TabStop = false;
+            this.NokiaBootAnimPictureBx.Visible = false;
             // 
             // pictureBox1
             // 
@@ -168,8 +169,8 @@
         private System.Windows.Forms.Button ZuruecksetzenBtn;
         private System.Windows.Forms.Button SchliessenBtn;
         private System.Windows.Forms.Panel KranPnl;
-        private System.Windows.Forms.PictureBox NokiaBootAnimPictureBx;
         public System.Windows.Forms.Timer NokiaBootTimer;
+        private System.Windows.Forms.PictureBox NokiaBootAnimPictureBx;
     }
 }
 

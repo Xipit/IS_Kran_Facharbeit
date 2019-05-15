@@ -94,5 +94,9 @@ namespace IS_Kran_Facharbeit
 
         }
 
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

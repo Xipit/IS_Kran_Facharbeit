@@ -101,12 +101,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Nokia Smartphone.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\LeftButton.bmp" />
-    <Content Include="Resources\leftrightbutton.png" />
-    <None Include="Resources\leftrightbuttons.png" />
+    <Content Include="Resources\kran.png" />
+    <Content Include="Resources\led-green.png" />
+    <Content Include="Resources\led-red.png" />
+    <Content Include="Resources\leftrightbuttons.png" />
+    <Content Include="Resources\Nokia Smartphone-ON.png" />
+    <Content Include="Resources\Nokia Smartphone.png" />
+    <Content Include="Resources\stopbutton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

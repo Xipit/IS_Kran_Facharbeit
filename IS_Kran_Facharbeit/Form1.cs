@@ -31,19 +31,24 @@ namespace IS_Kran_Facharbeit
             Close();
         }
 
-        private void NokiaAnAus_Click(object sender, EventArgs e)
+        void NokiaPower()
         {
             if (nokiaAngeschaltet == false)
             {
                 NokiaBootAnimStart();
             }
 
-            if(nokiaAnim == false)
+            if (nokiaAnim == false)
             {
                 NokiaShutDownScreenStart();
             }
-
         }
+
+        /*private void NokiaAnAus_Click(object sender, EventArgs e)
+        {
+            NokiaAnAus();
+
+        }*/
 
         void NokiaBootAnimStart()
         {
@@ -188,6 +193,23 @@ namespace IS_Kran_Facharbeit
         private void LaufkatzeUntenBtn_MouseUp(object sender, MouseEventArgs e)
         {
             LaufkatzeBewegungsRichtung = new Point(0, 0);
+        }
+
+
+        //On/Off Button
+        private void NokiaAnAus_MouseDown(object sender, MouseEventArgs e)
+        {
+            NokiaAnAus.BackgroundImage = new Bitmap(IS_Kran_Facharbeit.Properties.Resources.leftrightbuttons);
+        }
+
+        private void NokiaAnAus_MouseLeave(object sender, EventArgs e)
+        {
+            NokiaPower();
+        }
+
+        private void NokiaAnAus_MouseUp(object sender, MouseEventArgs e)
+        {
+            NokiaPower();
         }
     }
 }

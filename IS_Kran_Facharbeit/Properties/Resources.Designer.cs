@@ -63,6 +63,16 @@ namespace IS_Kran_Facharbeit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kran {
+            get {
+                object obj = ResourceManager.GetObject("kran", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap leftrightbuttons {
             get {
                 object obj = ResourceManager.GetObject("leftrightbuttons", resourceCulture);

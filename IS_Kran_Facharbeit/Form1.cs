@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace IS_Kran_Facharbeit
 {
 
     public partial class Form1 : Form
     {
         public bool nokiaAngeschaltet = false;
-        public bool nokiaBootAnim = false;
+        public bool nokiaAnim = false;
 
         public Form1()
         {
@@ -33,32 +34,55 @@ namespace IS_Kran_Facharbeit
                 NokiaBootAnimStart();
             }
 
-            if(nokiaBootAnim == false)
-                nokiaAngeschaltet = !nokiaAngeschaltet;
+            if(nokiaAnim == false)
+            {
+                NokiaShutDownScreenStart();
+            }
+
         }
 
         void NokiaBootAnimStart()
         {
+            nokiaAngeschaltet = true;
             NokiaBootAnimPictureBx.Visible = true;
-            nokiaBootAnim = true;
+            nokiaAnim = true;
             NokiaBootAnimPictureBx.Enabled = true;
             NokiaBootTimer.Enabled = true;
-            nokiaAngeschaltet = true;
-
         }
 
         void NokiaBootAnimStop()
         {
             NokiaBootAnimPictureBx.Enabled = false;
             NokiaBootTimer.Enabled = false;
-            nokiaBootAnim = false;
+            nokiaAnim = false;
             NokiaBootAnimPictureBx.Visible = false;
+        }
+
+        void NokiaShutDownScreenStart()
+        {
+            NokiaBootAnimPictureBx.Visible = true;
+            nokiaAnim = true;
+            NokiaShutDownTimer.Enabled = true;
+        }
+
+        void NokiaShutDownScreenStop()
+        {
+            NokiaBootAnimPictureBx.Visible = false;
+            nokiaAnim = false;
+            NokiaShutDownTimer.Enabled = false;
+            nokiaAngeschaltet = !nokiaAngeschaltet;
         }
 
         private void NokiaBootTimer_Tick(object sender, EventArgs e)
         {
             NokiaBootAnimStop();
         }
+
+        private void NokiaShutDownTimer_Tick(object sender, EventArgs e)
+        {
+            NokiaShutDownScreenStop();
+        }
+
 
         private void ZuruecksetzenBtn_Click(object sender, EventArgs e)
         {
@@ -69,5 +93,6 @@ namespace IS_Kran_Facharbeit
         {
 
         }
+
     }
 }

@@ -199,6 +199,8 @@ namespace IS_Kran_Facharbeit
         //On/Off Button
         private void NokiaAnAus_MouseDown(object sender, MouseEventArgs e)
         {
+            //new Image(IS_Kran_Facharbeit.Properties.Resources.pr)
+
             NokiaAnAus.BackgroundImage = new Bitmap(IS_Kran_Facharbeit.Properties.Resources.leftrightbuttons);
         }
 

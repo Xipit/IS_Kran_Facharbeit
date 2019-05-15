@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.KransteuerungPnl = new System.Windows.Forms.Panel();
+            this.LaufkatzeUntenBtn = new System.Windows.Forms.Button();
+            this.LaufkatzeRechtsBtn = new System.Windows.Forms.Button();
+            this.LaufkatzeLinksButton = new System.Windows.Forms.Button();
+            this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
+            this.NokiaSmartphonePictureBx = new System.Windows.Forms.PictureBox();
             this.ProgrammsteuerungPnl = new System.Windows.Forms.Panel();
             this.InfoBtn = new System.Windows.Forms.Button();
             this.ZuruecksetzenBtn = new System.Windows.Forms.Button();
@@ -41,32 +46,108 @@
             this.NokiaShutDownTimer = new System.Windows.Forms.Timer(this.components);
             this.BewegungTimer = new System.Windows.Forms.Timer(this.components);
             this.LaufkatzeHochBtn = new System.Windows.Forms.Button();
-            this.LaufkatzeUntenBtn = new System.Windows.Forms.Button();
-            this.LaufkatzeRechtsBtn = new System.Windows.Forms.Button();
-            this.LaufkatzeLinksButton = new System.Windows.Forms.Button();
-            this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
-            this.NokiaSmartphonePictureBx = new System.Windows.Forms.PictureBox();
             this.NokiaAnAus = new System.Windows.Forms.Button();
             this.KransteuerungPnl.SuspendLayout();
-            this.ProgrammsteuerungPnl.SuspendLayout();
-            this.KranPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).BeginInit();
+            this.ProgrammsteuerungPnl.SuspendLayout();
+            this.KranPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // KransteuerungPnl
             // 
+            this.KransteuerungPnl.Controls.Add(this.NokiaAnAus);
             this.KransteuerungPnl.Controls.Add(this.LaufkatzeHochBtn);
             this.KransteuerungPnl.Controls.Add(this.LaufkatzeUntenBtn);
             this.KransteuerungPnl.Controls.Add(this.LaufkatzeRechtsBtn);
             this.KransteuerungPnl.Controls.Add(this.LaufkatzeLinksButton);
             this.KransteuerungPnl.Controls.Add(this.NokiaBootAnimPictureBx);
             this.KransteuerungPnl.Controls.Add(this.NokiaSmartphonePictureBx);
-            this.KransteuerungPnl.Controls.Add(this.NokiaAnAus);
             this.KransteuerungPnl.Location = new System.Drawing.Point(852, 12);
             this.KransteuerungPnl.Name = "KransteuerungPnl";
             this.KransteuerungPnl.Size = new System.Drawing.Size(293, 670);
             this.KransteuerungPnl.TabIndex = 0;
+            // 
+            // LaufkatzeUntenBtn
+            // 
+            this.LaufkatzeUntenBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LaufkatzeUntenBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LaufkatzeUntenBtn.BackgroundImage")));
+            this.LaufkatzeUntenBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LaufkatzeUntenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LaufkatzeUntenBtn.FlatAppearance.BorderSize = 0;
+            this.LaufkatzeUntenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LaufkatzeUntenBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LaufkatzeUntenBtn.Location = new System.Drawing.Point(114, 399);
+            this.LaufkatzeUntenBtn.Name = "LaufkatzeUntenBtn";
+            this.LaufkatzeUntenBtn.Size = new System.Drawing.Size(59, 59);
+            this.LaufkatzeUntenBtn.TabIndex = 5;
+            this.LaufkatzeUntenBtn.UseVisualStyleBackColor = false;
+            this.LaufkatzeUntenBtn.Visible = false;
+            this.LaufkatzeUntenBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeUntenBtn_MouseDown);
+            this.LaufkatzeUntenBtn.MouseLeave += new System.EventHandler(this.LaufkatzeUntenBtn_MouseLeave);
+            this.LaufkatzeUntenBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeUntenBtn_MouseUp);
+            // 
+            // LaufkatzeRechtsBtn
+            // 
+            this.LaufkatzeRechtsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LaufkatzeRechtsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LaufkatzeRechtsBtn.BackgroundImage")));
+            this.LaufkatzeRechtsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LaufkatzeRechtsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LaufkatzeRechtsBtn.FlatAppearance.BorderSize = 0;
+            this.LaufkatzeRechtsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LaufkatzeRechtsBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LaufkatzeRechtsBtn.Location = new System.Drawing.Point(167, 313);
+            this.LaufkatzeRechtsBtn.Name = "LaufkatzeRechtsBtn";
+            this.LaufkatzeRechtsBtn.Size = new System.Drawing.Size(59, 59);
+            this.LaufkatzeRechtsBtn.TabIndex = 3;
+            this.LaufkatzeRechtsBtn.UseVisualStyleBackColor = false;
+            this.LaufkatzeRechtsBtn.Visible = false;
+            this.LaufkatzeRechtsBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeRechtsBtn_MouseDown);
+            this.LaufkatzeRechtsBtn.MouseLeave += new System.EventHandler(this.LaufkatzeRechtsBtn_MouseLeave);
+            this.LaufkatzeRechtsBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeRechtsBtn_MouseUp);
+            // 
+            // LaufkatzeLinksButton
+            // 
+            this.LaufkatzeLinksButton.BackColor = System.Drawing.Color.Transparent;
+            this.LaufkatzeLinksButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LaufkatzeLinksButton.BackgroundImage")));
+            this.LaufkatzeLinksButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LaufkatzeLinksButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LaufkatzeLinksButton.FlatAppearance.BorderSize = 0;
+            this.LaufkatzeLinksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LaufkatzeLinksButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LaufkatzeLinksButton.Location = new System.Drawing.Point(63, 313);
+            this.LaufkatzeLinksButton.Name = "LaufkatzeLinksButton";
+            this.LaufkatzeLinksButton.Size = new System.Drawing.Size(59, 59);
+            this.LaufkatzeLinksButton.TabIndex = 2;
+            this.LaufkatzeLinksButton.UseVisualStyleBackColor = false;
+            this.LaufkatzeLinksButton.Visible = false;
+            this.LaufkatzeLinksButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeLinksButton_MouseDown);
+            this.LaufkatzeLinksButton.MouseLeave += new System.EventHandler(this.LaufkatzeLinksButton_MouseLeave);
+            this.LaufkatzeLinksButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeLinksButton_MouseUp);
+            // 
+            // NokiaBootAnimPictureBx
+            // 
+            this.NokiaBootAnimPictureBx.Enabled = false;
+            this.NokiaBootAnimPictureBx.Image = ((System.Drawing.Image)(resources.GetObject("NokiaBootAnimPictureBx.Image")));
+            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(47, 200);
+            this.NokiaBootAnimPictureBx.Name = "NokiaBootAnimPictureBx";
+            this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(200, 363);
+            this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.NokiaBootAnimPictureBx.TabIndex = 0;
+            this.NokiaBootAnimPictureBx.TabStop = false;
+            this.NokiaBootAnimPictureBx.Visible = false;
+            // 
+            // NokiaSmartphonePictureBx
+            // 
+            this.NokiaSmartphonePictureBx.BackColor = System.Drawing.Color.Transparent;
+            this.NokiaSmartphonePictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.Nokia_Smartphone;
+            this.NokiaSmartphonePictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.NokiaSmartphonePictureBx.ErrorImage = global::IS_Kran_Facharbeit.Properties.Resources.Nokia_Smartphone;
+            this.NokiaSmartphonePictureBx.Location = new System.Drawing.Point(14, 119);
+            this.NokiaSmartphonePictureBx.Name = "NokiaSmartphonePictureBx";
+            this.NokiaSmartphonePictureBx.Size = new System.Drawing.Size(267, 516);
+            this.NokiaSmartphonePictureBx.TabIndex = 1;
+            this.NokiaSmartphonePictureBx.TabStop = false;
             // 
             // ProgrammsteuerungPnl
             // 
@@ -152,110 +233,21 @@
             this.LaufkatzeHochBtn.FlatAppearance.BorderSize = 0;
             this.LaufkatzeHochBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LaufkatzeHochBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LaufkatzeHochBtn.Location = new System.Drawing.Point(114, 238);
+            this.LaufkatzeHochBtn.Location = new System.Drawing.Point(114, 233);
             this.LaufkatzeHochBtn.Name = "LaufkatzeHochBtn";
             this.LaufkatzeHochBtn.Size = new System.Drawing.Size(59, 59);
             this.LaufkatzeHochBtn.TabIndex = 6;
             this.LaufkatzeHochBtn.UseVisualStyleBackColor = false;
             this.LaufkatzeHochBtn.Visible = false;
-            this.LaufkatzeHochBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeHochBtn_MouseDown);
-            this.LaufkatzeHochBtn.MouseLeave += new System.EventHandler(this.LaufkatzeHochBtn_MouseLeave);
-            this.LaufkatzeHochBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeHochBtn_MouseUp);
-            // 
-            // LaufkatzeUntenBtn
-            // 
-            this.LaufkatzeUntenBtn.BackColor = System.Drawing.Color.Transparent;
-            this.LaufkatzeUntenBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LaufkatzeUntenBtn.BackgroundImage")));
-            this.LaufkatzeUntenBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LaufkatzeUntenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LaufkatzeUntenBtn.FlatAppearance.BorderSize = 0;
-            this.LaufkatzeUntenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LaufkatzeUntenBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LaufkatzeUntenBtn.Location = new System.Drawing.Point(114, 399);
-            this.LaufkatzeUntenBtn.Name = "LaufkatzeUntenBtn";
-            this.LaufkatzeUntenBtn.Size = new System.Drawing.Size(59, 59);
-            this.LaufkatzeUntenBtn.TabIndex = 5;
-            this.LaufkatzeUntenBtn.UseVisualStyleBackColor = false;
-            this.LaufkatzeUntenBtn.Visible = false;
-            this.LaufkatzeUntenBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeUntenBtn_MouseDown);
-            this.LaufkatzeUntenBtn.MouseLeave += new System.EventHandler(this.LaufkatzeUntenBtn_MouseLeave);
-            this.LaufkatzeUntenBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeUntenBtn_MouseUp);
-            // 
-            // LaufkatzeRechtsBtn
-            // 
-            this.LaufkatzeRechtsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.LaufkatzeRechtsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LaufkatzeRechtsBtn.BackgroundImage")));
-            this.LaufkatzeRechtsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LaufkatzeRechtsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LaufkatzeRechtsBtn.FlatAppearance.BorderSize = 0;
-            this.LaufkatzeRechtsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LaufkatzeRechtsBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LaufkatzeRechtsBtn.Location = new System.Drawing.Point(167, 313);
-            this.LaufkatzeRechtsBtn.Name = "LaufkatzeRechtsBtn";
-            this.LaufkatzeRechtsBtn.Size = new System.Drawing.Size(59, 59);
-            this.LaufkatzeRechtsBtn.TabIndex = 3;
-            this.LaufkatzeRechtsBtn.UseVisualStyleBackColor = false;
-            this.LaufkatzeRechtsBtn.Visible = false;
-            this.LaufkatzeRechtsBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeRechtsBtn_MouseDown);
-            this.LaufkatzeRechtsBtn.MouseLeave += new System.EventHandler(this.LaufkatzeRechtsBtn_MouseLeave);
-            this.LaufkatzeRechtsBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeRechtsBtn_MouseUp);
-            // 
-            // LaufkatzeLinksButton
-            // 
-            this.LaufkatzeLinksButton.BackColor = System.Drawing.Color.Transparent;
-            this.LaufkatzeLinksButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LaufkatzeLinksButton.BackgroundImage")));
-            this.LaufkatzeLinksButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LaufkatzeLinksButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LaufkatzeLinksButton.FlatAppearance.BorderSize = 0;
-            this.LaufkatzeLinksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LaufkatzeLinksButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LaufkatzeLinksButton.Location = new System.Drawing.Point(63, 313);
-            this.LaufkatzeLinksButton.Name = "LaufkatzeLinksButton";
-            this.LaufkatzeLinksButton.Size = new System.Drawing.Size(59, 59);
-            this.LaufkatzeLinksButton.TabIndex = 2;
-            this.LaufkatzeLinksButton.UseVisualStyleBackColor = false;
-            this.LaufkatzeLinksButton.Visible = false;
-            this.LaufkatzeLinksButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeLinksButton_MouseDown);
-            this.LaufkatzeLinksButton.MouseLeave += new System.EventHandler(this.LaufkatzeLinksButton_MouseLeave);
-            this.LaufkatzeLinksButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LaufkatzeLinksButton_MouseUp);
-            // 
-            // NokiaBootAnimPictureBx
-            // 
-            this.NokiaBootAnimPictureBx.Enabled = false;
-            this.NokiaBootAnimPictureBx.Image = ((System.Drawing.Image)(resources.GetObject("NokiaBootAnimPictureBx.Image")));
-            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(47, 200);
-            this.NokiaBootAnimPictureBx.Name = "NokiaBootAnimPictureBx";
-            this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(200, 363);
-            this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.NokiaBootAnimPictureBx.TabIndex = 0;
-            this.NokiaBootAnimPictureBx.TabStop = false;
-            this.NokiaBootAnimPictureBx.Visible = false;
-            // 
-            // NokiaSmartphonePictureBx
-            // 
-            this.NokiaSmartphonePictureBx.BackColor = System.Drawing.Color.Transparent;
-            this.NokiaSmartphonePictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.Nokia_Smartphone;
-            this.NokiaSmartphonePictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.NokiaSmartphonePictureBx.ErrorImage = global::IS_Kran_Facharbeit.Properties.Resources.Nokia_Smartphone;
-            this.NokiaSmartphonePictureBx.Location = new System.Drawing.Point(14, 119);
-            this.NokiaSmartphonePictureBx.Name = "NokiaSmartphonePictureBx";
-            this.NokiaSmartphonePictureBx.Size = new System.Drawing.Size(267, 516);
-            this.NokiaSmartphonePictureBx.TabIndex = 1;
-            this.NokiaSmartphonePictureBx.TabStop = false;
             // 
             // NokiaAnAus
             // 
-            this.NokiaAnAus.BackColor = System.Drawing.Color.Transparent;
-            this.NokiaAnAus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.NokiaAnAus.Location = new System.Drawing.Point(102, 21);
+            this.NokiaAnAus.Location = new System.Drawing.Point(114, 20);
             this.NokiaAnAus.Name = "NokiaAnAus";
-            this.NokiaAnAus.Size = new System.Drawing.Size(83, 75);
-            this.NokiaAnAus.TabIndex = 0;
-            this.NokiaAnAus.Text = "An/Aus";
-            this.NokiaAnAus.UseVisualStyleBackColor = false;
-            this.NokiaAnAus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NokiaAnAus_MouseDown);
-            this.NokiaAnAus.MouseLeave += new System.EventHandler(this.NokiaAnAus_MouseLeave);
-            this.NokiaAnAus.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NokiaAnAus_MouseUp);
+            this.NokiaAnAus.Size = new System.Drawing.Size(75, 23);
+            this.NokiaAnAus.TabIndex = 7;
+            this.NokiaAnAus.Text = "button1";
+            this.NokiaAnAus.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -269,11 +261,11 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.KransteuerungPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).EndInit();
             this.ProgrammsteuerungPnl.ResumeLayout(false);
             this.KranPnl.ResumeLayout(false);
             this.KranPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,7 +274,6 @@
 
         private System.Windows.Forms.Panel KransteuerungPnl;
         private System.Windows.Forms.PictureBox NokiaSmartphonePictureBx;
-        private System.Windows.Forms.Button NokiaAnAus;
         private System.Windows.Forms.Panel ProgrammsteuerungPnl;
         private System.Windows.Forms.Button InfoBtn;
         private System.Windows.Forms.Button ZuruecksetzenBtn;
@@ -297,6 +288,7 @@
         private System.Windows.Forms.Button LaufkatzeUntenBtn;
         private System.Windows.Forms.Button LaufkatzeRechtsBtn;
         private System.Windows.Forms.Button LaufkatzeHochBtn;
+        private System.Windows.Forms.Button NokiaAnAus;
     }
 }
 

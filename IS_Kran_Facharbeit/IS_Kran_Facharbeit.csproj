@@ -101,6 +101,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\an.jpg" />
+    <Content Include="Resources\aus.jpg" />
     <Content Include="Resources\kran.png" />
     <None Include="Resources\kran1.png" />
     <Content Include="Resources\led-green.png" />
@@ -108,6 +110,7 @@
     <Content Include="Resources\leftrightbuttons.png" />
     <Content Include="Resources\Nokia Smartphone-ON.png" />
     <Content Include="Resources\Nokia Smartphone.png" />
+    <Content Include="Resources\pressed.jpg" />
     <Content Include="Resources\stopbutton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

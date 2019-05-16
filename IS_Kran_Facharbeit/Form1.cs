@@ -12,20 +12,23 @@ namespace IS_Kran_Facharbeit
         public bool nokiaAnim = false;
         public bool mouseOverNokiaPowerButton = false;
 
-        public Point LaufkatzeBewegungsRichtung;
-        public Point LaufkatzePosition = new Point(250, 155);
+        public Point laufkatzeBewegungsRichtung;
+        public Point laufkatzePosition = new Point(250, 155);
 
-        public bool LastGegriffen = true;
+        public bool lastGegriffen = false;
 
-        public int Ground = 524;
-        public Pen LaufkatzenSeilenPen = new Pen(Color.Black, 2F);
+        public int boden = 524;
 
         public int geschwindigkeit = 1;
+
+        public bool geschenkGebracht = false;
+        public bool weihnachtsmannLosgefahren = false;
+        public int sekundenÜbrig = 30;
 
         public Form1()
         {
             InitializeComponent();
-            LaufkatzePictureBx.Location = LaufkatzePosition;
+            LaufkatzePictureBx.Location = laufkatzePosition;
             Tablet_OFFPictureBx.BringToFront();
         }
 
@@ -68,6 +71,8 @@ namespace IS_Kran_Facharbeit
             SetLaufkatzeButtonsVisible();
             NokiaSmartphonePictureBx.BackgroundImage = (Bitmap)Properties.Resources.Nokia_Smartphone_ON;
             Tablet_OFFPictureBx.SendToBack();
+            ZeitÜbrigTimer.Enabled = true;
+            sekundenÜbrig = 30;
         }
 
         void NokiaShutDownScreenStart()
@@ -76,6 +81,7 @@ namespace IS_Kran_Facharbeit
             NokiaBootAnimPictureBx.Visible = true;
             nokiaAnim = true;
             NokiaShutDownTimer.Enabled = true;
+            ZeitÜbrigTimer.Enabled = false;
         }
 
         void NokiaShutDownScreenStop()
@@ -101,7 +107,13 @@ namespace IS_Kran_Facharbeit
 
         private void ZuruecksetzenBtn_Click(object sender, EventArgs e)
         {
-
+            lastGegriffen = false;
+            laufkatzePosition = new Point(250, 155);
+            LastPictureBx.Location = new Point(296, 493);
+            WeihnachtsmannPictureBox.Location = new Point(400, 449);
+            sekundenÜbrig = 30;
+            weihnachtsmannLosgefahren = false;
+            ZeitÜbrigTimer.Enabled = true;
         }
 
         private void InfoBtn_Click(object sender, EventArgs e)
@@ -138,22 +150,26 @@ namespace IS_Kran_Facharbeit
             if(nokiaAnim == false && nokiaAngeschaltet == true)
             {
                 int LastPositionOffset = 5 - geschwindigkeit;
-                if (LastGegriffen != true)
+                if (lastGegriffen != true)
                     LastPositionOffset = 4 - geschwindigkeit;
+                Point Objekt = new Point(LastPictureBx.Location.X + laufkatzeBewegungsRichtung.X, LastPictureBx.Location.Y + LastPositionOffset + laufkatzeBewegungsRichtung.Y);
+                if (lastGegriffen != true)
+                    Objekt = new Point(laufkatzePosition.X + laufkatzeBewegungsRichtung.X, laufkatzePosition.Y + laufkatzeBewegungsRichtung.Y);
 
-                if (ImBereich(new Point(LaufkatzePosition.X + LaufkatzeBewegungsRichtung.X, LaufkatzePosition.Y + LaufkatzeBewegungsRichtung.Y), new Point(450, 300), 165, 195, 208, 10) &&
-                   ImBereich(new Point(LastPictureBx.Location.X + LaufkatzeBewegungsRichtung.X, LastPictureBx.Location.Y + LastPositionOffset + LaufkatzeBewegungsRichtung.Y), new Point(450, 300), 165, 198, 208, 10)&&
-                   NichtKollidierenLaufkatze(new Point(LaufkatzePosition.X + LaufkatzeBewegungsRichtung.X, LaufkatzePosition.Y + LaufkatzeBewegungsRichtung.Y)))
+
+                if (ImBereich(new Point(laufkatzePosition.X + laufkatzeBewegungsRichtung.X, laufkatzePosition.Y + laufkatzeBewegungsRichtung.Y), new Point(450, 300), 165, 195, 208, 10) &&
+                   ImBereich(new Point(LastPictureBx.Location.X + laufkatzeBewegungsRichtung.X, LastPictureBx.Location.Y + LastPositionOffset + laufkatzeBewegungsRichtung.Y), new Point(450, 300), 165, 198, 208, 10) &&
+                   NichtKollidieren(Objekt))
                 {
-                    LaufkatzePosition = new Point(LaufkatzePosition.X + LaufkatzeBewegungsRichtung.X, LaufkatzePosition.Y + LaufkatzeBewegungsRichtung.Y);
+                    laufkatzePosition = new Point(laufkatzePosition.X + laufkatzeBewegungsRichtung.X, laufkatzePosition.Y + laufkatzeBewegungsRichtung.Y);
 
-                    LaufkatzePictureBx.Location = LaufkatzePosition;
+                    LaufkatzePictureBx.Location = laufkatzePosition;
 
-                    label1.Text = "" + LaufkatzePosition;
+                    label1.Text = "" + laufkatzePosition;
 
-                    if(LastGegriffen == true)
+                    if(lastGegriffen == true)
                     {
-                        LastPictureBx.Location = new Point(LaufkatzePosition.X - 6, LaufkatzePosition.Y + LastPictureBx.Size.Height - 5);
+                        LastPictureBx.Location = new Point(laufkatzePosition.X - 6, laufkatzePosition.Y + LastPictureBx.Size.Height - 5);
                     }
                 }
             }
@@ -166,23 +182,23 @@ namespace IS_Kran_Facharbeit
         #region//Bewegung starten
         private void LaufkatzeLinksButton_MouseDown(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(-geschwindigkeit, 0);
+            laufkatzeBewegungsRichtung = new Point(-geschwindigkeit, 0);
         }
         private void LaufkatzeHochBtn_MouseDown(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, -geschwindigkeit);
+            laufkatzeBewegungsRichtung = new Point(0, -geschwindigkeit);
         }
         private void LaufkatzeRechtsBtn_MouseDown(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(geschwindigkeit, 0);
+            laufkatzeBewegungsRichtung = new Point(geschwindigkeit, 0);
         }
         private void LaufkatzeUntenBtn_MouseDown(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, geschwindigkeit);
+            laufkatzeBewegungsRichtung = new Point(0, geschwindigkeit);
         }
         private void BewegungTimer_Tick(object sender, EventArgs e)
         {
-            Laufkatzebewegen(LaufkatzeBewegungsRichtung);
+            Laufkatzebewegen(laufkatzeBewegungsRichtung);
         }
         #endregion
 
@@ -191,35 +207,35 @@ namespace IS_Kran_Facharbeit
 
         private void LaufkatzeLinksButton_MouseLeave(object sender, EventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeLinksButton_MouseUp(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeHochBtn_MouseLeave(object sender, EventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeHochBtn_MouseUp(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeRechtsBtn_MouseLeave(object sender, EventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeRechtsBtn_MouseUp(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeUntenBtn_MouseLeave(object sender, EventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         private void LaufkatzeUntenBtn_MouseUp(object sender, MouseEventArgs e)
         {
-            LaufkatzeBewegungsRichtung = new Point(0, 0);
+            laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         #endregion//Bewegung SToppen
 
@@ -257,72 +273,49 @@ namespace IS_Kran_Facharbeit
 
         void LastGreifen()
         {
-            if (ImBereich(LaufkatzePosition, LastPictureBx.Location, 50, 0, 20, 20))
+            if (ImBereich(laufkatzePosition, LastPictureBx.Location, 50, 0, 20, 20) && !weihnachtsmannLosgefahren && sekundenÜbrig >= 5)
             {
-                while(LaufkatzePosition.Y + LaufkatzePictureBx.Size.Height + LastPictureBx.Size.Height > 530)
+                while(laufkatzePosition.Y + LaufkatzePictureBx.Size.Height + LastPictureBx.Size.Height > 530)
                 {
-                    LaufkatzePosition.Y -= 1;
+                    laufkatzePosition.Y -= 1;
                 }
 
-                LastGegriffen = true;
+                lastGegriffen = true;
                 LastGreifenBtn.BackgroundImage = (Bitmap)Properties.Resources.unlocked;
             }
         }
 
         void LastLoslassen()
         {
-            if(LastGegriffen == true)
+            if(lastGegriffen == true)
             {
-                LastGegriffen = false;
+                lastGegriffen = false;
                 LastGreifenBtn.BackgroundImage = (Bitmap)Properties.Resources.locked;
             }
         }
 
         void LaufkatzenElementeBewegen()
         {
-            LaufkatzenSeil1Btn.Location = new Point(LaufkatzePosition.X + 4, 135);
-            LaufkatzenSeil1Btn.Size = new Size(2, LaufkatzePosition.Y -135);
+            LaufkatzenSeil1Btn.Location = new Point(laufkatzePosition.X + 4, 135);
+            LaufkatzenSeil1Btn.Size = new Size(2, laufkatzePosition.Y -135);
 
-            LaufkatzenSeil2Btn.Location = new Point(LaufkatzePosition.X + 8, 135);
-            LaufkatzenSeil2Btn.Size = new Size(2, LaufkatzePosition.Y - 135);
+            LaufkatzenSeil2Btn.Location = new Point(laufkatzePosition.X + 8, 135);
+            LaufkatzenSeil2Btn.Size = new Size(2, laufkatzePosition.Y - 135);
 
-            if(LastGegriffen == true)
+            if(lastGegriffen == true)
             {
-                LaufkatzenSeil3Btn.Location = new Point(LaufkatzePosition.X + 5, LaufkatzePosition.Y + 23);
+                LaufkatzenSeil3Btn.Location = new Point(laufkatzePosition.X + 5, laufkatzePosition.Y + 23);
                 LaufkatzenSeil3Btn.Size = new Size(3, 10);
             }
             else
                 LaufkatzenSeil3Btn.Location = new Point(770, 300);
 
-            SeilBoxPictureBox.Location = new Point(LaufkatzePosition.X - 1, 130);
+            SeilBoxPictureBox.Location = new Point(laufkatzePosition.X - 1, 130);
         }
 
-        public bool NichtKollidierenLast(Point Objekt)
+        public bool NichtKollidieren(Point Objekt)
         {
- 
-            //Schlittenhinten
-            if (ImBereich(Objekt, new Point(400, 450), 31, 25, 13, 23))
-            {
-                return false;
-            }
-            //Schlittenboden
-            if (ImBereich(Objekt, new Point(440, 460), 33, 25, 20, 30))
-            {
-                return false;
-            }
-            //Weihnachtsmann
-            if (ImBereich(Objekt, new Point(460, 440), 46, 25, 29, 30))
-            {
-                return false;
-            }
-
-
-            return true;
-        }
-
-        public bool NichtKollidierenLaufkatze(Point Objekt)
-        {
-            if(LastGegriffen == false && Objekt != LastPictureBx.Location)
+            if(lastGegriffen == false && Objekt != new Point(LastPictureBx.Location.X + 1, LastPictureBx.Location.Y + 5))
             {
                 if (ImBereich(Objekt, LastPictureBx.Location, 27, 20, 10, 30))
                 {
@@ -330,24 +323,25 @@ namespace IS_Kran_Facharbeit
                 }
             }
 
-            //Schlittenhinten
-            if (ImBereich(Objekt, new Point(400, 450), 31, 25, 13, 23))
-            {
-                return false;
-            }
-            //Schlittenboden
-            if (ImBereich(Objekt, new Point(440, 460), 33, 25, 20, 30))
-            {
-                return false;
-            }
-            //Weihnachtsmann
-            if (ImBereich(Objekt, new Point(460, 440), 46, 25, 29, 30))
-            {
-                return false;
-            }
+                //Schlittenhinten
+                if (ImBereich(Objekt, new Point(400, 450), 1, 100, 20, 18))
+                {
+                    return false;
+                }
+                //Schlittenboden
+                if (ImBereich(Objekt, new Point(440, 460), 3, 100, 50, 25))
+                {
+                    return false;
+                }
+                //Weihnachtsmann
+                if (ImBereich(Objekt, new Point(460, 440), 16, 100, 36, 20))
+                {
+                    return false;
+                }
             
 
             return true;
+            
         }
 
         public bool ImBereich(Point Objekt, Point Subjekt, int ÜberY, int UnterY, int RechtsX, int LinksX)
@@ -365,7 +359,7 @@ namespace IS_Kran_Facharbeit
 
         private void LastGreifenBtn_Click(object sender, EventArgs e)
         {
-            if (LastGegriffen == false)
+            if (lastGegriffen == false)
                 LastGreifen();
             else
                 LastLoslassen();
@@ -373,14 +367,60 @@ namespace IS_Kran_Facharbeit
 
         private void LastFallTimer_Tick(object sender, EventArgs e)
         {
-            if(LastGegriffen == false)
+            if(lastGegriffen == false)
             {
-                if (LastPictureBx.Location.Y + LastPictureBx.Size.Height < Ground && NichtKollidierenLast(LastPictureBx.Location))
+                if (LastPictureBx.Location.Y + LastPictureBx.Size.Height < boden && NichtKollidieren(new Point(LastPictureBx.Location.X + 1, LastPictureBx.Location.Y  + 5)))
                 {
                     LastPictureBx.Location = new Point(LastPictureBx.Location.X, LastPictureBx.Location.Y + 1);
                 }
             }
         }
 
+        private void GeschenkeAusgeteiltTimer_Tick(object sender, EventArgs e)
+        {
+            if(ImBereich(LastPictureBx.Location, new Point(420, 450), 20, 100, 20, 100))
+            {
+                if(lastGegriffen == true)
+                {
+                    WeihnachtsmannInfoLbl2.Text = "Das Geschenk ist fast da";
+                    geschenkGebracht = false;
+                }
+                else
+                {
+                    WeihnachtsmannInfoLbl2.Text = "Super!, du bist eine große Hilfe \nfür den Weihnachtsmann!";
+                    geschenkGebracht = true;
+                    if (sekundenÜbrig >= 5)
+                        sekundenÜbrig = 5;
+                }
+            }
+            else
+            {
+                WeihnachtsmannInfoLbl2.Text = "";
+                geschenkGebracht = false;
+            }
+
+            if(weihnachtsmannLosgefahren)
+            {
+                LastPictureBx.Location = new Point(LastPictureBx.Location.X + 2, LastPictureBx.Location.Y);
+                WeihnachtsmannPictureBox.Location = new Point(WeihnachtsmannPictureBox.Location.X + 2, LastPictureBx.Location.Y);
+            }
+        }
+
+        void WeihnachtsmannFahrt()
+        {
+
+        }
+
+        private void ZeitÜbrigTimer_Tick(object sender, EventArgs e)
+        {
+            sekundenÜbrig--;
+            TimerLbl.Text = "Der Weihnachtsmann fährt in \n" + sekundenÜbrig + " Sekunden los!";
+
+            if(sekundenÜbrig == 0)
+            {
+                ZeitÜbrigTimer.Enabled = false;
+                weihnachtsmannLosgefahren = true;
+            }
+        }
     }
 }

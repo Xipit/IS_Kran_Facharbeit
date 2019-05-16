@@ -72,18 +72,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -103,12 +103,27 @@
   <ItemGroup>
     <Content Include="Resources\an.jpg" />
     <Content Include="Resources\aus.jpg" />
+    <None Include="Resources\WeihnachtsmannFertig.jpg" />
+    <None Include="Resources\Weihnachtsmann.jpg" />
+    <None Include="Resources\crane-clipart-crane-hook-5.png" />
+    <None Include="Resources\crane-clipart-crane-hook-6.jpg" />
+    <None Include="Resources\crane-clipart-crane-hook-10.png" />
+    <None Include="Resources\Quadrat.jpg" />
+    <None Include="Resources\rechteck.jpg" />
+    <Content Include="Resources\unlocked.bmp" />
+    <Content Include="Resources\locked.bmp" />
+    <None Include="Resources\tablet.png" />
+    <Content Include="Resources\haken.png" />
+    <Content Include="Resources\background.png" />
     <Content Include="Resources\kran.png" />
     <None Include="Resources\kran1.png" />
+    <None Include="Resources\last.jpg" />
     <Content Include="Resources\led-green.png" />
     <Content Include="Resources\led-red.png" />
     <Content Include="Resources\leftrightbuttons.png" />
-    <Content Include="Resources\Nokia Smartphone-ON.png" />
+    <None Include="Resources\Nokia Smartphone-ON.png" />
+    <Content Include="Resources\mibu2pum.bmp" />
+    <Content Include="Resources\Nokia Smartphone-OFF.png" />
     <Content Include="Resources\Nokia Smartphone.png" />
     <Content Include="Resources\pressed.jpg" />
     <Content Include="Resources\stopbutton.png" />

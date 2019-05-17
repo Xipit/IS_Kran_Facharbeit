@@ -119,19 +119,15 @@ namespace IS_Kran_Facharbeit
         private void InfoBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "Dieses Programm wurde von Hannp Witzleb und Eliah Lohr zu Bildungszweken erstellt.\n" +
+                "Dieses Programm wurde von Hanno Witzleb und Eliah Lohr zu Bildungszweken erstellt.\n" +
                 "Das vorliegende Produkt ist, abzüglich jeglicher verwendeter Grafiken dritter, " +
                 "nichtkommerzialisiertes geistiges Eigentum von Impulsm Entertainment. " +
                 "Das sogenannte 'Gif' beim Telefonstartvorgang, der Markenname 'Nokia' und die Nokia Telefone sind geistiges Eigentum der Nokia Corporation. " +
                 "Die Rechte dritter bleiben unberührt. Komerzielle verbreitung des Softwareprodukts stellt " +
-                "eine Verletzung der Rechte gegenüber Impulsm Entertainment und dritter Rechtehalter dar." +
+                "eine Verletzung der Rechte gegenüber Impulsm Entertainment und dritter dar." +
                 "\n\nimpulsmentertainment.de - 2019/Q2", "Produktinformationen", MessageBoxButtons.OK);
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         #region//ButtonVisible
         void SetLaufkatzeButtonsVisible()
@@ -288,7 +284,7 @@ namespace IS_Kran_Facharbeit
                 }
 
                 lastGegriffen = true;
-                LastGreifenBtn.BackgroundImage = (Bitmap)Properties.Resources.unlocked;
+                LastGreifenBtn.BackgroundImage = (Bitmap)Properties.Resources.locked;
             }
         }
 
@@ -297,7 +293,7 @@ namespace IS_Kran_Facharbeit
             if(lastGegriffen == true)
             {
                 lastGegriffen = false;
-                LastGreifenBtn.BackgroundImage = (Bitmap)Properties.Resources.locked;
+                LastGreifenBtn.BackgroundImage = (Bitmap)Properties.Resources.unlocked;
             }
         }
 

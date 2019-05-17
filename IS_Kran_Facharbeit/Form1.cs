@@ -30,6 +30,7 @@ namespace IS_Kran_Facharbeit
         {
             InitializeComponent();
             LaufkatzePictureBx.Location = laufkatzePosition;
+            //Tablet "ausschalten", wird hier gemacht, damit beim arbeiten im Entwurf die PictureBx nicht im Weg ist
             Tablet_OFFPictureBx.BringToFront();
         }
 
@@ -41,8 +42,10 @@ namespace IS_Kran_Facharbeit
         #endregion
 
         #region// An/Aus Animationen
+
         void NokiaPower()
         {
+            //starten der Boot, bzw. Shutdown Animationen des Nokia Smartphones
             if (nokiaAngeschaltet == false)
             {
                 NokiaBootAnimStart();
@@ -55,6 +58,11 @@ namespace IS_Kran_Facharbeit
             }
         }
 
+        //Animationerkärung:
+        //Die Animationen funktionieren durch das enablen (auch visible) der NokiaBootAnimPictureBx
+        //Die Animation wird anhand eines Timers gestoppt, der enabled wird wenn die Animation gestartet wird und disabled wenn sie zu Ende ist
+        //Anhand der FUnktionen wird auch das "Anschalten" des Tablets durchgeführt
+        
         void NokiaBootAnimStart()
         {
             nokiaAngeschaltet = true;
@@ -96,11 +104,11 @@ namespace IS_Kran_Facharbeit
             Tablet_OFFPictureBx.BringToFront();
         }
 
+        //Beenden der Animationen
         private void NokiaBootTimer_Tick(object sender, EventArgs e)
         {
             NokiaBootAnimStop();
         }
-
         private void NokiaShutDownTimer_Tick(object sender, EventArgs e)
         {
             NokiaShutDownScreenStop();
@@ -109,7 +117,7 @@ namespace IS_Kran_Facharbeit
 
 
         #region//An/Aus
-        //On/Off Button
+        //On/Off Button des Nokia Smartphones
         private void NokiaAnAus_MouseDown_1(object sender, MouseEventArgs e)
         {
             if (nokiaAnim == false)
@@ -156,6 +164,8 @@ namespace IS_Kran_Facharbeit
         #endregion
 
         #region//ButtonVisible
+        //Funktionen, damit die Buttons im Smartphone nur sichtbar sind, wenn es an ist
+        //Diese werden in den AnimationStop Funktionen gecallt
         void SetLaufkatzeButtonsVisible()
         {
             LaufkatzeHochBtn.Visible = true;
@@ -183,8 +193,12 @@ namespace IS_Kran_Facharbeit
         #region//Bewegung
         void Laufkatzebewegen (Point bewegung)
         {
+            //Diese Funktion wird in LaufkatzeBewegungsTimer_Tick gecallt und führt somit alle par millisekunden diesen code aus
+            //Der Point laufkatzeBewegungsrichtung wird durch die Bewegungs Buttons im Smartphone abgeändert
+            //Diese befinden sich in den Regionen "Bewegung starten" und "Bewegung stoppen"
             if(nokiaAnim == false && nokiaAngeschaltet == true)
             {
+                //ändern der Variablen ob die Last gerade angehängt ist oder nicht, wichtig für Bestimmung ob sich bewegt werden kann
                 int LastPositionOffset = 5 - geschwindigkeit;
                 if (lastGegriffen != true)
                     LastPositionOffset = 4 - geschwindigkeit;
@@ -205,23 +219,24 @@ namespace IS_Kran_Facharbeit
 
                     if(lastGegriffen == true)
                     {
+                        //falls last angehängt, bewegt dise sich mit
                         LastPictureBx.Location = new Point(laufkatzePosition.X - 6, laufkatzePosition.Y + LastPictureBx.Size.Height - 5);
                     }
                 }
             }
 
-            
-
             LaufkatzenElementeBewegen();
         }
         void LaufkatzenElementeBewegen()
         {
+            //Aktualisierung der extra Elemte die sich mitbewegen, wie bspw. der Seile
             LaufkatzenSeil1Btn.Location = new Point(laufkatzePosition.X + 4, 135);
             LaufkatzenSeil1Btn.Size = new Size(2, laufkatzePosition.Y -135);
 
             LaufkatzenSeil2Btn.Location = new Point(laufkatzePosition.X + 8, 135);
             LaufkatzenSeil2Btn.Size = new Size(2, laufkatzePosition.Y - 135);
 
+            //kleines Seil zwischen Haken und Last wenn angehängt
             if(lastGegriffen == true)
             {
                 LaufkatzenSeil3Btn.Location = new Point(laufkatzePosition.X + 5, laufkatzePosition.Y + 23);
@@ -240,6 +255,8 @@ namespace IS_Kran_Facharbeit
             LaufkatzeBewegungTimer.Interval = neuerInterval;
         }
 
+        //ändern des Intervals des Timers und damit die Häufigkeit mit der sich die Laufkatze bewegt
+        //ändern der Bilder der GeschwindigkeitsButtons um zu verdeutlichen wleche gerade ausgewählt ist
         private void Geschwindigkeit1Btn_Click(object sender, EventArgs e)
         {
             LaufkatzeBewegungsTimerIntervalÄndern(25);
@@ -266,6 +283,7 @@ namespace IS_Kran_Facharbeit
         #endregion
 
         #region//Bewegung starten
+        //während die Buttons gedrückt werden wird der die Bewegungsrichtung gesetzt, die dann mit dem LaufkatzeBewegungTimer_Tick ausgeführt werden
         private void LaufkatzeLinksButton_MouseDown(object sender, MouseEventArgs e)
         {
             laufkatzeBewegungsRichtung = new Point(-geschwindigkeit, 0);
@@ -289,8 +307,7 @@ namespace IS_Kran_Facharbeit
         #endregion
 
         #region//Bewegung stoppen
-        
-
+        //Durch die bewegungsmethode die wir nutzen ist es wichtig wenn nichts mehr gedrückt wird, die BewegungsRichtung auf null zu setzen
         private void LaufkatzeLinksButton_MouseLeave(object sender, EventArgs e)
         {
             laufkatzeBewegungsRichtung = new Point(0, 0);
@@ -406,6 +423,7 @@ namespace IS_Kran_Facharbeit
         #region//Timer Ticks
         private void LastFallTimer_Tick(object sender, EventArgs e)
         {
+            //Im Endeffekt die Gravitation der Last, die nur dann aktiv ist, wenn es nicht angehängt ist und nicht kollidieren würde
             if(lastGegriffen == false && geschenkImWagen == false)
             {
                 if (LastPictureBx.Location.Y + LastPictureBx.Size.Height < boden && NichtKollidieren(new Point(LastPictureBx.Location.X + 1, LastPictureBx.Location.Y  + 5)))
@@ -421,6 +439,7 @@ namespace IS_Kran_Facharbeit
 
         private void GeschenkeAusgeteiltTimer_Tick(object sender, EventArgs e)
         {
+            //Feedback ob die Last am richtigen Ort ist
             if(ImBereich(LastPictureBx.Location, new Point(420, 450), 20, 100, 20, 100))
             {
                 if(lastGegriffen == true)
@@ -446,7 +465,8 @@ namespace IS_Kran_Facharbeit
                 geschenkGebracht = false;
             }
 
-            if(weihnachtsmannLosgefahren)
+            //tatsächliches Bewegen des Weihnachtsmannes und der Last, wenn die Last geliefert wurde
+            if (weihnachtsmannLosgefahren)
             {
                 LastPictureBx.Location = new Point(LastPictureBx.Location.X + 2, LastPictureBx.Location.Y);
                 WeihnachtsmannPictureBox.Location = new Point(WeihnachtsmannPictureBox.Location.X + 2, WeihnachtsmannPictureBox.Location.Y);
@@ -456,12 +476,14 @@ namespace IS_Kran_Facharbeit
 
         private void ZeitÜbrigTimer_Tick(object sender, EventArgs e)
         {
+            //Timer visualisierung
             if(sekundenÜbrig > 0)
             {
                 sekundenÜbrig--;
                 TimerLbl.Text = "Der Weihnachtsmann fährt in \n" + sekundenÜbrig + " Sekunden los!";
             }
 
+            //Die Weihnachtsmannfahrt in Gang treten und den Nochmal Button erscheinen lassen
             if(sekundenÜbrig == 0)
             {
                 if(geschenkGebracht == true)
@@ -487,6 +509,9 @@ namespace IS_Kran_Facharbeit
         #region//Zurücksetzen
         void FormZuruecksetzen()
         {
+            //Zurücksetzung aller Objekte auf ihren Ausgangsort
+            //Bools auf Ausgangsstand zurücksetzen, die nicht durch Timer kontrolliert werden
+
             lastGegriffen = false;
             laufkatzePosition = new Point(250, 155);
             LastPictureBx.Location = new Point(296, 493);

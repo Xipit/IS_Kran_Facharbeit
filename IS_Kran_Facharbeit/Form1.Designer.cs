@@ -583,6 +583,7 @@
             this.Controls.Add(this.KransteuerungPnl);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "IS_Kran_Facharbeit";
             this.KransteuerungPnl.ResumeLayout(false);

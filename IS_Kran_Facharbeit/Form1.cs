@@ -22,6 +22,7 @@ namespace IS_Kran_Facharbeit
         public int geschwindigkeit = 1;
 
         public bool geschenkGebracht = false;
+        public bool geschenkImWagen = false;
         public bool weihnachtsmannLosgefahren = false;
         public int sekundenÜbrig = 30;
 
@@ -208,16 +209,25 @@ namespace IS_Kran_Facharbeit
         private void Geschwindigkeit1Btn_Click(object sender, EventArgs e)
         {
             LaufkatzeBewegungsTimerIntervalÄndern(25);
+            Geschwindigkeit1Btn.BackgroundImage = (Bitmap)Properties.Resources._1x;
+            Geschwindigkeit2Btn.BackgroundImage = (Bitmap)Properties.Resources._2x_non;
+            Geschwindigkeit3Btn.BackgroundImage = (Bitmap)Properties.Resources._3x_non;
         }
 
         private void Geschwindigkeit2Btn_Click(object sender, EventArgs e)
         {
             LaufkatzeBewegungsTimerIntervalÄndern(15);
+            Geschwindigkeit1Btn.BackgroundImage = (Bitmap)Properties.Resources._1x_non;
+            Geschwindigkeit2Btn.BackgroundImage = (Bitmap)Properties.Resources._2x;
+            Geschwindigkeit3Btn.BackgroundImage = (Bitmap)Properties.Resources._3x_non;
         }
 
         private void Geschwindigkeit3Btn_Click(object sender, EventArgs e)
         {
             LaufkatzeBewegungsTimerIntervalÄndern(3);
+            Geschwindigkeit1Btn.BackgroundImage = (Bitmap)Properties.Resources._1x_non;
+            Geschwindigkeit2Btn.BackgroundImage = (Bitmap)Properties.Resources._2x_non;
+            Geschwindigkeit3Btn.BackgroundImage = (Bitmap)Properties.Resources._3x;
         }
         #endregion
 
@@ -394,11 +404,15 @@ namespace IS_Kran_Facharbeit
         #region//Timer Ticks
         private void LastFallTimer_Tick(object sender, EventArgs e)
         {
-            if(lastGegriffen == false)
+            if(lastGegriffen == false && geschenkImWagen == false)
             {
                 if (LastPictureBx.Location.Y + LastPictureBx.Size.Height < boden && NichtKollidieren(new Point(LastPictureBx.Location.X + 1, LastPictureBx.Location.Y  + 5)))
                 {
                     LastPictureBx.Location = new Point(LastPictureBx.Location.X, LastPictureBx.Location.Y + 1);
+                }
+                else if(geschenkGebracht == true)
+                {
+                    geschenkImWagen = true;
                 }
             }
         }
@@ -433,7 +447,7 @@ namespace IS_Kran_Facharbeit
             if(weihnachtsmannLosgefahren)
             {
                 LastPictureBx.Location = new Point(LastPictureBx.Location.X + 2, LastPictureBx.Location.Y);
-                WeihnachtsmannPictureBox.Location = new Point(WeihnachtsmannPictureBox.Location.X + 2, LastPictureBx.Location.Y);
+                WeihnachtsmannPictureBox.Location = new Point(WeihnachtsmannPictureBox.Location.X + 2, WeihnachtsmannPictureBox.Location.Y);
             }
         }
 
@@ -477,6 +491,8 @@ namespace IS_Kran_Facharbeit
             WeihnachtsmannPictureBox.Location = new Point(400, 449);
             sekundenÜbrig = 30;
             weihnachtsmannLosgefahren = false;
+            geschenkGebracht = false;
+            geschenkImWagen = false;
             ZeitÜbrigTimer.Enabled = true;
 
             NeuerVersuchBtn.Enabled = false;

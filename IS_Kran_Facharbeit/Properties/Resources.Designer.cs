@@ -73,6 +73,16 @@ namespace IS_Kran_Facharbeit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1x_non {
+            get {
+                object obj = ResourceManager.GetObject("1x-non", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2x {
             get {
                 object obj = ResourceManager.GetObject("2x", resourceCulture);
@@ -83,9 +93,29 @@ namespace IS_Kran_Facharbeit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2x_non {
+            get {
+                object obj = ResourceManager.GetObject("2x-non", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3x {
             get {
                 object obj = ResourceManager.GetObject("3x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3x_non {
+            get {
+                object obj = ResourceManager.GetObject("3x-non", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +336,26 @@ namespace IS_Kran_Facharbeit.Properties {
         internal static System.Drawing.Bitmap tablet {
             get {
                 object obj = ResourceManager.GetObject("tablet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabletRechtsGanzerRand {
+            get {
+                object obj = ResourceManager.GetObject("tabletRechtsGanzerRand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabletRechtsRand {
+            get {
+                object obj = ResourceManager.GetObject("tabletRechtsRand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -101,8 +101,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1x-non.png" />
     <Content Include="Resources\1x.png" />
+    <Content Include="Resources\2x-non.png" />
     <Content Include="Resources\2x.png" />
+    <Content Include="Resources\3x-non.png" />
     <Content Include="Resources\3x.png" />
     <Content Include="Resources\an.jpg" />
     <Content Include="Resources\aus.jpg" />
@@ -113,6 +116,8 @@
     <None Include="Resources\crane-clipart-crane-hook-10.png" />
     <None Include="Resources\Quadrat.jpg" />
     <None Include="Resources\rechteck.jpg" />
+    <None Include="Resources\tabletRechtsRand.png" />
+    <None Include="Resources\tabletRechtsGanzerRand.png" />
     <Content Include="Resources\unlocked.bmp" />
     <Content Include="Resources\locked.bmp" />
     <None Include="Resources\tablet.png" />

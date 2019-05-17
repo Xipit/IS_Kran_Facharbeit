@@ -413,13 +413,25 @@ namespace IS_Kran_Facharbeit
 
         private void ZeitÜbrigTimer_Tick(object sender, EventArgs e)
         {
-            sekundenÜbrig--;
-            TimerLbl.Text = "Der Weihnachtsmann fährt in \n" + sekundenÜbrig + " Sekunden los!";
+            if(sekundenÜbrig > 0)
+            {
+                sekundenÜbrig--;
+                TimerLbl.Text = "Der Weihnachtsmann fährt in \n" + sekundenÜbrig + " Sekunden los!";
+            }
 
             if(sekundenÜbrig == 0)
             {
-                ZeitÜbrigTimer.Enabled = false;
-                weihnachtsmannLosgefahren = true;
+                if(geschenkGebracht == true)
+                {
+                    ZeitÜbrigTimer.Enabled = false;
+                    weihnachtsmannLosgefahren = true;
+                }
+                else
+                {
+                    ZeitÜbrigTimer.Enabled = false;
+                    TimerLbl.Text = "Due hast es nicht geschafft dem \nWeihnachtsmann sein Geschenk \nzu bringen. :(";
+                }
+
             }
         }
     }

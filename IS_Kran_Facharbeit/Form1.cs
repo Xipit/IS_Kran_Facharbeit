@@ -107,6 +107,40 @@ namespace IS_Kran_Facharbeit
         }
         #endregion
 
+
+        #region//An/Aus
+        //On/Off Button
+        private void NokiaAnAus_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            if (nokiaAnim == false)
+            {
+                NokiaAnAus.BackgroundImage = NokiaPowerImgList.Images[1];
+                mouseOverNokiaPowerButton = true;
+            }
+
+        }
+
+        private void NokiaAnAus_MouseLeave_1(object sender, EventArgs e)
+        {
+            if (mouseOverNokiaPowerButton == true)
+            {
+                NokiaPower();
+                mouseOverNokiaPowerButton = false;
+            }
+
+        }
+
+        private void NokiaAnAus_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            if (mouseOverNokiaPowerButton == true)
+            {
+                NokiaPower();
+                mouseOverNokiaPowerButton = false;
+            }
+        }
+        #endregion
+
+
         #region//Info
         private void InfoBtn_Click(object sender, EventArgs e)
         {
@@ -290,38 +324,6 @@ namespace IS_Kran_Facharbeit
             laufkatzeBewegungsRichtung = new Point(0, 0);
         }
         #endregion//Bewegung SToppen
-
-        #region//An/Aus
-        //On/Off Button
-        private void NokiaAnAus_MouseDown_1(object sender, MouseEventArgs e)
-        {
-            if(nokiaAnim == false)
-            {
-                NokiaAnAus.BackgroundImage = NokiaPowerImgList.Images[1];
-                mouseOverNokiaPowerButton = true;
-            }
-
-        }
-
-        private void NokiaAnAus_MouseLeave_1(object sender, EventArgs e)
-        {
-            if(mouseOverNokiaPowerButton == true)
-            {
-                NokiaPower();
-                mouseOverNokiaPowerButton = false;
-            }
-
-        }
-
-        private void NokiaAnAus_MouseUp_1(object sender, MouseEventArgs e)
-        {
-            if (mouseOverNokiaPowerButton == true)
-            {
-                NokiaPower();
-                mouseOverNokiaPowerButton = false;
-            }
-        }
-        #endregion
 
         #region//Greifen/Loslassen
         void LastGreifen()

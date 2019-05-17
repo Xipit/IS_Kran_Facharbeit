@@ -31,19 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.KransteuerungPnl = new System.Windows.Forms.Panel();
+            this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
+            this.Geschwindigkeit3Btn = new System.Windows.Forms.Button();
+            this.Geschwindigkeit2Btn = new System.Windows.Forms.Button();
+            this.Geschwindigkeit1Btn = new System.Windows.Forms.Button();
+            this.LastGreifenBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.NokiaAnAus = new System.Windows.Forms.Button();
+            this.LaufkatzeHochBtn = new System.Windows.Forms.Button();
+            this.LaufkatzeUntenBtn = new System.Windows.Forms.Button();
+            this.LaufkatzeRechtsBtn = new System.Windows.Forms.Button();
+            this.LaufkatzeLinksButton = new System.Windows.Forms.Button();
+            this.NokiaSmartphonePictureBx = new System.Windows.Forms.PictureBox();
             this.ProgrammsteuerungPnl = new System.Windows.Forms.Panel();
             this.InfoBtn = new System.Windows.Forms.Button();
             this.ZuruecksetzenBtn = new System.Windows.Forms.Button();
             this.SchliessenBtn = new System.Windows.Forms.Button();
             this.KranPnl = new System.Windows.Forms.Panel();
+            this.TabletRechtsRandPictureBx = new System.Windows.Forms.PictureBox();
             this.NeuerVersuchBtn = new System.Windows.Forms.Button();
             this.TimerLbl = new System.Windows.Forms.Label();
             this.WeihnachtsmannInfoLbl2 = new System.Windows.Forms.Label();
             this.WeihnachtsmannInfoLbl = new System.Windows.Forms.Label();
             this.LaufkatzenSeil3Btn = new System.Windows.Forms.Button();
+            this.SeilBoxPictureBox = new System.Windows.Forms.PictureBox();
+            this.LaufkatzePictureBx = new System.Windows.Forms.PictureBox();
+            this.LastPictureBx = new System.Windows.Forms.PictureBox();
+            this.WeihnachtsmannPictureBox = new System.Windows.Forms.PictureBox();
             this.LaufkatzenSeil2Btn = new System.Windows.Forms.Button();
             this.LaufkatzenSeil1Btn = new System.Windows.Forms.Button();
+            this.BackgroundImgPictureBx = new System.Windows.Forms.PictureBox();
+            this.TabletPictureBx = new System.Windows.Forms.PictureBox();
+            this.Tablet_OFFPictureBx = new System.Windows.Forms.PictureBox();
             this.NokiaBootTimer = new System.Windows.Forms.Timer(this.components);
             this.NokiaShutDownTimer = new System.Windows.Forms.Timer(this.components);
             this.LaufkatzeBewegungTimer = new System.Windows.Forms.Timer(this.components);
@@ -51,26 +70,9 @@
             this.LastFallTimer = new System.Windows.Forms.Timer(this.components);
             this.GeschenkeAusgeteiltTimer = new System.Windows.Forms.Timer(this.components);
             this.ZeitÜbrigTimer = new System.Windows.Forms.Timer(this.components);
-            this.TabletRechtsRandPictureBx = new System.Windows.Forms.PictureBox();
-            this.SeilBoxPictureBox = new System.Windows.Forms.PictureBox();
-            this.LaufkatzePictureBx = new System.Windows.Forms.PictureBox();
-            this.LastPictureBx = new System.Windows.Forms.PictureBox();
-            this.WeihnachtsmannPictureBox = new System.Windows.Forms.PictureBox();
-            this.BackgroundImgPictureBx = new System.Windows.Forms.PictureBox();
-            this.TabletPictureBx = new System.Windows.Forms.PictureBox();
-            this.Tablet_OFFPictureBx = new System.Windows.Forms.PictureBox();
-            this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
-            this.Geschwindigkeit3Btn = new System.Windows.Forms.Button();
-            this.Geschwindigkeit2Btn = new System.Windows.Forms.Button();
-            this.Geschwindigkeit1Btn = new System.Windows.Forms.Button();
-            this.LastGreifenBtn = new System.Windows.Forms.Button();
-            this.NokiaAnAus = new System.Windows.Forms.Button();
-            this.LaufkatzeHochBtn = new System.Windows.Forms.Button();
-            this.LaufkatzeUntenBtn = new System.Windows.Forms.Button();
-            this.LaufkatzeRechtsBtn = new System.Windows.Forms.Button();
-            this.LaufkatzeLinksButton = new System.Windows.Forms.Button();
-            this.NokiaSmartphonePictureBx = new System.Windows.Forms.PictureBox();
             this.KransteuerungPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).BeginInit();
             this.ProgrammsteuerungPnl.SuspendLayout();
             this.KranPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabletRechtsRandPictureBx)).BeginInit();
@@ -81,8 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImgPictureBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabletPictureBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tablet_OFFPictureBx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).BeginInit();
             this.SuspendLayout();
             // 
             // KransteuerungPnl
@@ -104,287 +104,6 @@
             this.KransteuerungPnl.Name = "KransteuerungPnl";
             this.KransteuerungPnl.Size = new System.Drawing.Size(293, 670);
             this.KransteuerungPnl.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(14, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
-            // 
-            // ProgrammsteuerungPnl
-            // 
-            this.ProgrammsteuerungPnl.BackColor = System.Drawing.Color.Transparent;
-            this.ProgrammsteuerungPnl.Controls.Add(this.InfoBtn);
-            this.ProgrammsteuerungPnl.Controls.Add(this.ZuruecksetzenBtn);
-            this.ProgrammsteuerungPnl.Controls.Add(this.SchliessenBtn);
-            this.ProgrammsteuerungPnl.Location = new System.Drawing.Point(12, 12);
-            this.ProgrammsteuerungPnl.Name = "ProgrammsteuerungPnl";
-            this.ProgrammsteuerungPnl.Size = new System.Drawing.Size(834, 65);
-            this.ProgrammsteuerungPnl.TabIndex = 1;
-            // 
-            // InfoBtn
-            // 
-            this.InfoBtn.BackColor = System.Drawing.Color.White;
-            this.InfoBtn.Cursor = System.Windows.Forms.Cursors.Help;
-            this.InfoBtn.FlatAppearance.BorderSize = 2;
-            this.InfoBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.InfoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.InfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.InfoBtn.Location = new System.Drawing.Point(264, 21);
-            this.InfoBtn.Name = "InfoBtn";
-            this.InfoBtn.Size = new System.Drawing.Size(75, 23);
-            this.InfoBtn.TabIndex = 2;
-            this.InfoBtn.Text = "Info";
-            this.InfoBtn.UseVisualStyleBackColor = false;
-            this.InfoBtn.Click += new System.EventHandler(this.InfoBtn_Click);
-            // 
-            // ZuruecksetzenBtn
-            // 
-            this.ZuruecksetzenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ZuruecksetzenBtn.Location = new System.Drawing.Point(140, 21);
-            this.ZuruecksetzenBtn.Name = "ZuruecksetzenBtn";
-            this.ZuruecksetzenBtn.Size = new System.Drawing.Size(81, 23);
-            this.ZuruecksetzenBtn.TabIndex = 1;
-            this.ZuruecksetzenBtn.Text = "Zurücksetzen";
-            this.ZuruecksetzenBtn.UseVisualStyleBackColor = true;
-            this.ZuruecksetzenBtn.Click += new System.EventHandler(this.ZuruecksetzenBtn_Click);
-            // 
-            // SchliessenBtn
-            // 
-            this.SchliessenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SchliessenBtn.Location = new System.Drawing.Point(26, 21);
-            this.SchliessenBtn.Name = "SchliessenBtn";
-            this.SchliessenBtn.Size = new System.Drawing.Size(75, 23);
-            this.SchliessenBtn.TabIndex = 0;
-            this.SchliessenBtn.Text = "Schließen";
-            this.SchliessenBtn.UseVisualStyleBackColor = true;
-            this.SchliessenBtn.Click += new System.EventHandler(this.SchliessenBtn_Click);
-            // 
-            // KranPnl
-            // 
-            this.KranPnl.BackColor = System.Drawing.Color.Transparent;
-            this.KranPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.KranPnl.Controls.Add(this.TabletRechtsRandPictureBx);
-            this.KranPnl.Controls.Add(this.NeuerVersuchBtn);
-            this.KranPnl.Controls.Add(this.TimerLbl);
-            this.KranPnl.Controls.Add(this.WeihnachtsmannInfoLbl2);
-            this.KranPnl.Controls.Add(this.WeihnachtsmannInfoLbl);
-            this.KranPnl.Controls.Add(this.LaufkatzenSeil3Btn);
-            this.KranPnl.Controls.Add(this.SeilBoxPictureBox);
-            this.KranPnl.Controls.Add(this.LaufkatzePictureBx);
-            this.KranPnl.Controls.Add(this.LastPictureBx);
-            this.KranPnl.Controls.Add(this.WeihnachtsmannPictureBox);
-            this.KranPnl.Controls.Add(this.LaufkatzenSeil2Btn);
-            this.KranPnl.Controls.Add(this.LaufkatzenSeil1Btn);
-            this.KranPnl.Controls.Add(this.BackgroundImgPictureBx);
-            this.KranPnl.Controls.Add(this.TabletPictureBx);
-            this.KranPnl.Controls.Add(this.Tablet_OFFPictureBx);
-            this.KranPnl.Location = new System.Drawing.Point(12, 83);
-            this.KranPnl.Name = "KranPnl";
-            this.KranPnl.Size = new System.Drawing.Size(834, 599);
-            this.KranPnl.TabIndex = 2;
-            // 
-            // NeuerVersuchBtn
-            // 
-            this.NeuerVersuchBtn.Enabled = false;
-            this.NeuerVersuchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NeuerVersuchBtn.Location = new System.Drawing.Point(521, 359);
-            this.NeuerVersuchBtn.Name = "NeuerVersuchBtn";
-            this.NeuerVersuchBtn.Size = new System.Drawing.Size(232, 23);
-            this.NeuerVersuchBtn.TabIndex = 13;
-            this.NeuerVersuchBtn.Text = "Nochmal probieren";
-            this.NeuerVersuchBtn.UseVisualStyleBackColor = true;
-            this.NeuerVersuchBtn.Visible = false;
-            this.NeuerVersuchBtn.Click += new System.EventHandler(this.NeuerVersuchBtn_Click);
-            // 
-            // TimerLbl
-            // 
-            this.TimerLbl.AutoSize = true;
-            this.TimerLbl.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimerLbl.Location = new System.Drawing.Point(521, 226);
-            this.TimerLbl.Name = "TimerLbl";
-            this.TimerLbl.Size = new System.Drawing.Size(215, 34);
-            this.TimerLbl.TabIndex = 12;
-            this.TimerLbl.Text = "Der Weihnachtsmann fährt in\r\n30 Sekunden los!";
-            // 
-            // WeihnachtsmannInfoLbl2
-            // 
-            this.WeihnachtsmannInfoLbl2.AutoSize = true;
-            this.WeihnachtsmannInfoLbl2.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeihnachtsmannInfoLbl2.Location = new System.Drawing.Point(521, 267);
-            this.WeihnachtsmannInfoLbl2.Name = "WeihnachtsmannInfoLbl2";
-            this.WeihnachtsmannInfoLbl2.Size = new System.Drawing.Size(0, 17);
-            this.WeihnachtsmannInfoLbl2.TabIndex = 11;
-            // 
-            // WeihnachtsmannInfoLbl
-            // 
-            this.WeihnachtsmannInfoLbl.AutoSize = true;
-            this.WeihnachtsmannInfoLbl.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeihnachtsmannInfoLbl.Location = new System.Drawing.Point(518, 85);
-            this.WeihnachtsmannInfoLbl.Name = "WeihnachtsmannInfoLbl";
-            this.WeihnachtsmannInfoLbl.Size = new System.Drawing.Size(235, 119);
-            this.WeihnachtsmannInfoLbl.TabIndex = 10;
-            this.WeihnachtsmannInfoLbl.Text = "Helfe dem Weihnachtsmann\r\nseine Geschenke\r\nzu verteilen!\r\n\r\nSammele das Geschenk " +
-    "ein und\r\nhebe es in den Schlitten vom\r\nWeihnachtsmann.";
-            // 
-            // LaufkatzenSeil3Btn
-            // 
-            this.LaufkatzenSeil3Btn.BackColor = System.Drawing.Color.Black;
-            this.LaufkatzenSeil3Btn.FlatAppearance.BorderSize = 0;
-            this.LaufkatzenSeil3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LaufkatzenSeil3Btn.Location = new System.Drawing.Point(770, 297);
-            this.LaufkatzenSeil3Btn.Name = "LaufkatzenSeil3Btn";
-            this.LaufkatzenSeil3Btn.Size = new System.Drawing.Size(27, 30);
-            this.LaufkatzenSeil3Btn.TabIndex = 6;
-            this.LaufkatzenSeil3Btn.UseVisualStyleBackColor = false;
-            // 
-            // LaufkatzenSeil2Btn
-            // 
-            this.LaufkatzenSeil2Btn.BackColor = System.Drawing.Color.Black;
-            this.LaufkatzenSeil2Btn.FlatAppearance.BorderSize = 0;
-            this.LaufkatzenSeil2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LaufkatzenSeil2Btn.Location = new System.Drawing.Point(729, 48);
-            this.LaufkatzenSeil2Btn.Name = "LaufkatzenSeil2Btn";
-            this.LaufkatzenSeil2Btn.Size = new System.Drawing.Size(24, 56);
-            this.LaufkatzenSeil2Btn.TabIndex = 5;
-            this.LaufkatzenSeil2Btn.UseVisualStyleBackColor = false;
-            // 
-            // LaufkatzenSeil1Btn
-            // 
-            this.LaufkatzenSeil1Btn.BackColor = System.Drawing.Color.Black;
-            this.LaufkatzenSeil1Btn.FlatAppearance.BorderSize = 0;
-            this.LaufkatzenSeil1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LaufkatzenSeil1Btn.Location = new System.Drawing.Point(667, 48);
-            this.LaufkatzenSeil1Btn.Name = "LaufkatzenSeil1Btn";
-            this.LaufkatzenSeil1Btn.Size = new System.Drawing.Size(24, 56);
-            this.LaufkatzenSeil1Btn.TabIndex = 4;
-            this.LaufkatzenSeil1Btn.UseVisualStyleBackColor = false;
-            // 
-            // NokiaBootTimer
-            // 
-            this.NokiaBootTimer.Interval = 3900;
-            this.NokiaBootTimer.Tick += new System.EventHandler(this.NokiaBootTimer_Tick);
-            // 
-            // NokiaShutDownTimer
-            // 
-            this.NokiaShutDownTimer.Interval = 1000;
-            this.NokiaShutDownTimer.Tick += new System.EventHandler(this.NokiaShutDownTimer_Tick);
-            // 
-            // LaufkatzeBewegungTimer
-            // 
-            this.LaufkatzeBewegungTimer.Enabled = true;
-            this.LaufkatzeBewegungTimer.Interval = 15;
-            this.LaufkatzeBewegungTimer.Tick += new System.EventHandler(this.BewegungTimer_Tick);
-            // 
-            // NokiaPowerImgList
-            // 
-            this.NokiaPowerImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("NokiaPowerImgList.ImageStream")));
-            this.NokiaPowerImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.NokiaPowerImgList.Images.SetKeyName(0, "aus.jpg");
-            this.NokiaPowerImgList.Images.SetKeyName(1, "pressed.jpg");
-            this.NokiaPowerImgList.Images.SetKeyName(2, "an.jpg");
-            // 
-            // LastFallTimer
-            // 
-            this.LastFallTimer.Enabled = true;
-            this.LastFallTimer.Interval = 5;
-            this.LastFallTimer.Tick += new System.EventHandler(this.LastFallTimer_Tick);
-            // 
-            // GeschenkeAusgeteiltTimer
-            // 
-            this.GeschenkeAusgeteiltTimer.Enabled = true;
-            this.GeschenkeAusgeteiltTimer.Interval = 10;
-            this.GeschenkeAusgeteiltTimer.Tick += new System.EventHandler(this.GeschenkeAusgeteiltTimer_Tick);
-            // 
-            // ZeitÜbrigTimer
-            // 
-            this.ZeitÜbrigTimer.Interval = 1000;
-            this.ZeitÜbrigTimer.Tick += new System.EventHandler(this.ZeitÜbrigTimer_Tick);
-            // 
-            // TabletRechtsRandPictureBx
-            // 
-            this.TabletRechtsRandPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.tabletRechtsGanzerRand;
-            this.TabletRechtsRandPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TabletRechtsRandPictureBx.Location = new System.Drawing.Point(764, 23);
-            this.TabletRechtsRandPictureBx.Name = "TabletRechtsRandPictureBx";
-            this.TabletRechtsRandPictureBx.Size = new System.Drawing.Size(152, 551);
-            this.TabletRechtsRandPictureBx.TabIndex = 14;
-            this.TabletRechtsRandPictureBx.TabStop = false;
-            // 
-            // SeilBoxPictureBox
-            // 
-            this.SeilBoxPictureBox.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.rechteck;
-            this.SeilBoxPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SeilBoxPictureBox.Location = new System.Drawing.Point(264, 129);
-            this.SeilBoxPictureBox.Name = "SeilBoxPictureBox";
-            this.SeilBoxPictureBox.Size = new System.Drawing.Size(16, 10);
-            this.SeilBoxPictureBox.TabIndex = 8;
-            this.SeilBoxPictureBox.TabStop = false;
-            // 
-            // LaufkatzePictureBx
-            // 
-            this.LaufkatzePictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.haken;
-            this.LaufkatzePictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LaufkatzePictureBx.Location = new System.Drawing.Point(306, 215);
-            this.LaufkatzePictureBx.Name = "LaufkatzePictureBx";
-            this.LaufkatzePictureBx.Size = new System.Drawing.Size(15, 28);
-            this.LaufkatzePictureBx.TabIndex = 2;
-            this.LaufkatzePictureBx.TabStop = false;
-            // 
-            // LastPictureBx
-            // 
-            this.LastPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.last;
-            this.LastPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LastPictureBx.Location = new System.Drawing.Point(296, 493);
-            this.LastPictureBx.Name = "LastPictureBx";
-            this.LastPictureBx.Size = new System.Drawing.Size(25, 31);
-            this.LastPictureBx.TabIndex = 3;
-            this.LastPictureBx.TabStop = false;
-            // 
-            // WeihnachtsmannPictureBox
-            // 
-            this.WeihnachtsmannPictureBox.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.WeihnachtsmannFertig;
-            this.WeihnachtsmannPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.WeihnachtsmannPictureBox.Location = new System.Drawing.Point(400, 449);
-            this.WeihnachtsmannPictureBox.Name = "WeihnachtsmannPictureBox";
-            this.WeihnachtsmannPictureBox.Size = new System.Drawing.Size(353, 75);
-            this.WeihnachtsmannPictureBox.TabIndex = 9;
-            this.WeihnachtsmannPictureBox.TabStop = false;
-            // 
-            // BackgroundImgPictureBx
-            // 
-            this.BackgroundImgPictureBx.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImgPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.kran;
-            this.BackgroundImgPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BackgroundImgPictureBx.Location = new System.Drawing.Point(71, 73);
-            this.BackgroundImgPictureBx.Name = "BackgroundImgPictureBx";
-            this.BackgroundImgPictureBx.Size = new System.Drawing.Size(473, 451);
-            this.BackgroundImgPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BackgroundImgPictureBx.TabIndex = 0;
-            this.BackgroundImgPictureBx.TabStop = false;
-            // 
-            // TabletPictureBx
-            // 
-            this.TabletPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.tablet;
-            this.TabletPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TabletPictureBx.Location = new System.Drawing.Point(26, 23);
-            this.TabletPictureBx.Name = "TabletPictureBx";
-            this.TabletPictureBx.Size = new System.Drawing.Size(784, 551);
-            this.TabletPictureBx.TabIndex = 1;
-            this.TabletPictureBx.TabStop = false;
-            // 
-            // Tablet_OFFPictureBx
-            // 
-            this.Tablet_OFFPictureBx.BackColor = System.Drawing.Color.Black;
-            this.Tablet_OFFPictureBx.Location = new System.Drawing.Point(71, 70);
-            this.Tablet_OFFPictureBx.Name = "Tablet_OFFPictureBx";
-            this.Tablet_OFFPictureBx.Size = new System.Drawing.Size(695, 456);
-            this.Tablet_OFFPictureBx.TabIndex = 7;
-            this.Tablet_OFFPictureBx.TabStop = false;
             // 
             // NokiaBootAnimPictureBx
             // 
@@ -464,6 +183,16 @@
             this.LastGreifenBtn.UseVisualStyleBackColor = true;
             this.LastGreifenBtn.Visible = false;
             this.LastGreifenBtn.Click += new System.EventHandler(this.LastGreifenBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(14, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // NokiaAnAus
             // 
@@ -571,6 +300,277 @@
             this.NokiaSmartphonePictureBx.TabIndex = 1;
             this.NokiaSmartphonePictureBx.TabStop = false;
             // 
+            // ProgrammsteuerungPnl
+            // 
+            this.ProgrammsteuerungPnl.BackColor = System.Drawing.Color.Transparent;
+            this.ProgrammsteuerungPnl.Controls.Add(this.InfoBtn);
+            this.ProgrammsteuerungPnl.Controls.Add(this.ZuruecksetzenBtn);
+            this.ProgrammsteuerungPnl.Controls.Add(this.SchliessenBtn);
+            this.ProgrammsteuerungPnl.Location = new System.Drawing.Point(12, 12);
+            this.ProgrammsteuerungPnl.Name = "ProgrammsteuerungPnl";
+            this.ProgrammsteuerungPnl.Size = new System.Drawing.Size(834, 65);
+            this.ProgrammsteuerungPnl.TabIndex = 1;
+            // 
+            // InfoBtn
+            // 
+            this.InfoBtn.BackColor = System.Drawing.Color.White;
+            this.InfoBtn.Cursor = System.Windows.Forms.Cursors.Help;
+            this.InfoBtn.FlatAppearance.BorderSize = 2;
+            this.InfoBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.InfoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.InfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.InfoBtn.Location = new System.Drawing.Point(264, 21);
+            this.InfoBtn.Name = "InfoBtn";
+            this.InfoBtn.Size = new System.Drawing.Size(75, 23);
+            this.InfoBtn.TabIndex = 2;
+            this.InfoBtn.Text = "Info";
+            this.InfoBtn.UseVisualStyleBackColor = false;
+            this.InfoBtn.Click += new System.EventHandler(this.InfoBtn_Click);
+            // 
+            // ZuruecksetzenBtn
+            // 
+            this.ZuruecksetzenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ZuruecksetzenBtn.Location = new System.Drawing.Point(140, 21);
+            this.ZuruecksetzenBtn.Name = "ZuruecksetzenBtn";
+            this.ZuruecksetzenBtn.Size = new System.Drawing.Size(81, 23);
+            this.ZuruecksetzenBtn.TabIndex = 1;
+            this.ZuruecksetzenBtn.Text = "Zurücksetzen";
+            this.ZuruecksetzenBtn.UseVisualStyleBackColor = true;
+            this.ZuruecksetzenBtn.Click += new System.EventHandler(this.ZuruecksetzenBtn_Click);
+            // 
+            // SchliessenBtn
+            // 
+            this.SchliessenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SchliessenBtn.Location = new System.Drawing.Point(26, 21);
+            this.SchliessenBtn.Name = "SchliessenBtn";
+            this.SchliessenBtn.Size = new System.Drawing.Size(75, 23);
+            this.SchliessenBtn.TabIndex = 0;
+            this.SchliessenBtn.Text = "Schließen";
+            this.SchliessenBtn.UseVisualStyleBackColor = true;
+            this.SchliessenBtn.Click += new System.EventHandler(this.SchliessenBtn_Click);
+            // 
+            // KranPnl
+            // 
+            this.KranPnl.BackColor = System.Drawing.Color.Transparent;
+            this.KranPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.KranPnl.Controls.Add(this.TabletRechtsRandPictureBx);
+            this.KranPnl.Controls.Add(this.NeuerVersuchBtn);
+            this.KranPnl.Controls.Add(this.TimerLbl);
+            this.KranPnl.Controls.Add(this.WeihnachtsmannInfoLbl2);
+            this.KranPnl.Controls.Add(this.WeihnachtsmannInfoLbl);
+            this.KranPnl.Controls.Add(this.LaufkatzenSeil3Btn);
+            this.KranPnl.Controls.Add(this.SeilBoxPictureBox);
+            this.KranPnl.Controls.Add(this.LaufkatzePictureBx);
+            this.KranPnl.Controls.Add(this.LastPictureBx);
+            this.KranPnl.Controls.Add(this.WeihnachtsmannPictureBox);
+            this.KranPnl.Controls.Add(this.LaufkatzenSeil2Btn);
+            this.KranPnl.Controls.Add(this.LaufkatzenSeil1Btn);
+            this.KranPnl.Controls.Add(this.BackgroundImgPictureBx);
+            this.KranPnl.Controls.Add(this.TabletPictureBx);
+            this.KranPnl.Controls.Add(this.Tablet_OFFPictureBx);
+            this.KranPnl.Location = new System.Drawing.Point(12, 83);
+            this.KranPnl.Name = "KranPnl";
+            this.KranPnl.Size = new System.Drawing.Size(834, 599);
+            this.KranPnl.TabIndex = 2;
+            // 
+            // TabletRechtsRandPictureBx
+            // 
+            this.TabletRechtsRandPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.tabletRechtsGanzerRand;
+            this.TabletRechtsRandPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TabletRechtsRandPictureBx.Location = new System.Drawing.Point(764, 23);
+            this.TabletRechtsRandPictureBx.Name = "TabletRechtsRandPictureBx";
+            this.TabletRechtsRandPictureBx.Size = new System.Drawing.Size(152, 551);
+            this.TabletRechtsRandPictureBx.TabIndex = 14;
+            this.TabletRechtsRandPictureBx.TabStop = false;
+            // 
+            // NeuerVersuchBtn
+            // 
+            this.NeuerVersuchBtn.Enabled = false;
+            this.NeuerVersuchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NeuerVersuchBtn.Location = new System.Drawing.Point(521, 359);
+            this.NeuerVersuchBtn.Name = "NeuerVersuchBtn";
+            this.NeuerVersuchBtn.Size = new System.Drawing.Size(232, 23);
+            this.NeuerVersuchBtn.TabIndex = 13;
+            this.NeuerVersuchBtn.Text = "Nochmal probieren";
+            this.NeuerVersuchBtn.UseVisualStyleBackColor = true;
+            this.NeuerVersuchBtn.Visible = false;
+            this.NeuerVersuchBtn.Click += new System.EventHandler(this.NeuerVersuchBtn_Click);
+            // 
+            // TimerLbl
+            // 
+            this.TimerLbl.AutoSize = true;
+            this.TimerLbl.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimerLbl.Location = new System.Drawing.Point(521, 226);
+            this.TimerLbl.Name = "TimerLbl";
+            this.TimerLbl.Size = new System.Drawing.Size(215, 34);
+            this.TimerLbl.TabIndex = 12;
+            this.TimerLbl.Text = "Der Weihnachtsmann fährt in\r\n30 Sekunden los!";
+            // 
+            // WeihnachtsmannInfoLbl2
+            // 
+            this.WeihnachtsmannInfoLbl2.AutoSize = true;
+            this.WeihnachtsmannInfoLbl2.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeihnachtsmannInfoLbl2.Location = new System.Drawing.Point(521, 267);
+            this.WeihnachtsmannInfoLbl2.Name = "WeihnachtsmannInfoLbl2";
+            this.WeihnachtsmannInfoLbl2.Size = new System.Drawing.Size(0, 17);
+            this.WeihnachtsmannInfoLbl2.TabIndex = 11;
+            // 
+            // WeihnachtsmannInfoLbl
+            // 
+            this.WeihnachtsmannInfoLbl.AutoSize = true;
+            this.WeihnachtsmannInfoLbl.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeihnachtsmannInfoLbl.Location = new System.Drawing.Point(518, 85);
+            this.WeihnachtsmannInfoLbl.Name = "WeihnachtsmannInfoLbl";
+            this.WeihnachtsmannInfoLbl.Size = new System.Drawing.Size(235, 119);
+            this.WeihnachtsmannInfoLbl.TabIndex = 10;
+            this.WeihnachtsmannInfoLbl.Text = "Helfe dem Weihnachtsmann\r\nseine Geschenke\r\nzu verteilen!\r\n\r\nSammele das Geschenk " +
+    "ein und\r\nhebe es in den Schlitten vom\r\nWeihnachtsmann.";
+            // 
+            // LaufkatzenSeil3Btn
+            // 
+            this.LaufkatzenSeil3Btn.BackColor = System.Drawing.Color.Black;
+            this.LaufkatzenSeil3Btn.FlatAppearance.BorderSize = 0;
+            this.LaufkatzenSeil3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LaufkatzenSeil3Btn.Location = new System.Drawing.Point(770, 297);
+            this.LaufkatzenSeil3Btn.Name = "LaufkatzenSeil3Btn";
+            this.LaufkatzenSeil3Btn.Size = new System.Drawing.Size(27, 30);
+            this.LaufkatzenSeil3Btn.TabIndex = 6;
+            this.LaufkatzenSeil3Btn.UseVisualStyleBackColor = false;
+            // 
+            // SeilBoxPictureBox
+            // 
+            this.SeilBoxPictureBox.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.rechteck;
+            this.SeilBoxPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SeilBoxPictureBox.Location = new System.Drawing.Point(264, 129);
+            this.SeilBoxPictureBox.Name = "SeilBoxPictureBox";
+            this.SeilBoxPictureBox.Size = new System.Drawing.Size(16, 10);
+            this.SeilBoxPictureBox.TabIndex = 8;
+            this.SeilBoxPictureBox.TabStop = false;
+            // 
+            // LaufkatzePictureBx
+            // 
+            this.LaufkatzePictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.haken;
+            this.LaufkatzePictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LaufkatzePictureBx.Location = new System.Drawing.Point(306, 215);
+            this.LaufkatzePictureBx.Name = "LaufkatzePictureBx";
+            this.LaufkatzePictureBx.Size = new System.Drawing.Size(15, 28);
+            this.LaufkatzePictureBx.TabIndex = 2;
+            this.LaufkatzePictureBx.TabStop = false;
+            // 
+            // LastPictureBx
+            // 
+            this.LastPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.last;
+            this.LastPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LastPictureBx.Location = new System.Drawing.Point(296, 493);
+            this.LastPictureBx.Name = "LastPictureBx";
+            this.LastPictureBx.Size = new System.Drawing.Size(25, 31);
+            this.LastPictureBx.TabIndex = 3;
+            this.LastPictureBx.TabStop = false;
+            // 
+            // WeihnachtsmannPictureBox
+            // 
+            this.WeihnachtsmannPictureBox.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.WeihnachtsmannFertig;
+            this.WeihnachtsmannPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.WeihnachtsmannPictureBox.Location = new System.Drawing.Point(400, 449);
+            this.WeihnachtsmannPictureBox.Name = "WeihnachtsmannPictureBox";
+            this.WeihnachtsmannPictureBox.Size = new System.Drawing.Size(353, 75);
+            this.WeihnachtsmannPictureBox.TabIndex = 9;
+            this.WeihnachtsmannPictureBox.TabStop = false;
+            // 
+            // LaufkatzenSeil2Btn
+            // 
+            this.LaufkatzenSeil2Btn.BackColor = System.Drawing.Color.Black;
+            this.LaufkatzenSeil2Btn.FlatAppearance.BorderSize = 0;
+            this.LaufkatzenSeil2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LaufkatzenSeil2Btn.Location = new System.Drawing.Point(729, 48);
+            this.LaufkatzenSeil2Btn.Name = "LaufkatzenSeil2Btn";
+            this.LaufkatzenSeil2Btn.Size = new System.Drawing.Size(24, 56);
+            this.LaufkatzenSeil2Btn.TabIndex = 5;
+            this.LaufkatzenSeil2Btn.UseVisualStyleBackColor = false;
+            // 
+            // LaufkatzenSeil1Btn
+            // 
+            this.LaufkatzenSeil1Btn.BackColor = System.Drawing.Color.Black;
+            this.LaufkatzenSeil1Btn.FlatAppearance.BorderSize = 0;
+            this.LaufkatzenSeil1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LaufkatzenSeil1Btn.Location = new System.Drawing.Point(667, 48);
+            this.LaufkatzenSeil1Btn.Name = "LaufkatzenSeil1Btn";
+            this.LaufkatzenSeil1Btn.Size = new System.Drawing.Size(24, 56);
+            this.LaufkatzenSeil1Btn.TabIndex = 4;
+            this.LaufkatzenSeil1Btn.UseVisualStyleBackColor = false;
+            // 
+            // BackgroundImgPictureBx
+            // 
+            this.BackgroundImgPictureBx.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImgPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.kran;
+            this.BackgroundImgPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImgPictureBx.Location = new System.Drawing.Point(71, 73);
+            this.BackgroundImgPictureBx.Name = "BackgroundImgPictureBx";
+            this.BackgroundImgPictureBx.Size = new System.Drawing.Size(473, 451);
+            this.BackgroundImgPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BackgroundImgPictureBx.TabIndex = 0;
+            this.BackgroundImgPictureBx.TabStop = false;
+            // 
+            // TabletPictureBx
+            // 
+            this.TabletPictureBx.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.tablet;
+            this.TabletPictureBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TabletPictureBx.Location = new System.Drawing.Point(26, 23);
+            this.TabletPictureBx.Name = "TabletPictureBx";
+            this.TabletPictureBx.Size = new System.Drawing.Size(784, 551);
+            this.TabletPictureBx.TabIndex = 1;
+            this.TabletPictureBx.TabStop = false;
+            // 
+            // Tablet_OFFPictureBx
+            // 
+            this.Tablet_OFFPictureBx.BackColor = System.Drawing.Color.Black;
+            this.Tablet_OFFPictureBx.Location = new System.Drawing.Point(71, 70);
+            this.Tablet_OFFPictureBx.Name = "Tablet_OFFPictureBx";
+            this.Tablet_OFFPictureBx.Size = new System.Drawing.Size(695, 456);
+            this.Tablet_OFFPictureBx.TabIndex = 7;
+            this.Tablet_OFFPictureBx.TabStop = false;
+            // 
+            // NokiaBootTimer
+            // 
+            this.NokiaBootTimer.Interval = 3900;
+            this.NokiaBootTimer.Tick += new System.EventHandler(this.NokiaBootTimer_Tick);
+            // 
+            // NokiaShutDownTimer
+            // 
+            this.NokiaShutDownTimer.Interval = 1000;
+            this.NokiaShutDownTimer.Tick += new System.EventHandler(this.NokiaShutDownTimer_Tick);
+            // 
+            // LaufkatzeBewegungTimer
+            // 
+            this.LaufkatzeBewegungTimer.Enabled = true;
+            this.LaufkatzeBewegungTimer.Interval = 15;
+            this.LaufkatzeBewegungTimer.Tick += new System.EventHandler(this.BewegungTimer_Tick);
+            // 
+            // NokiaPowerImgList
+            // 
+            this.NokiaPowerImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("NokiaPowerImgList.ImageStream")));
+            this.NokiaPowerImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.NokiaPowerImgList.Images.SetKeyName(0, "aus.jpg");
+            this.NokiaPowerImgList.Images.SetKeyName(1, "pressed.jpg");
+            this.NokiaPowerImgList.Images.SetKeyName(2, "an.jpg");
+            // 
+            // LastFallTimer
+            // 
+            this.LastFallTimer.Enabled = true;
+            this.LastFallTimer.Interval = 5;
+            this.LastFallTimer.Tick += new System.EventHandler(this.LastFallTimer_Tick);
+            // 
+            // GeschenkeAusgeteiltTimer
+            // 
+            this.GeschenkeAusgeteiltTimer.Enabled = true;
+            this.GeschenkeAusgeteiltTimer.Interval = 10;
+            this.GeschenkeAusgeteiltTimer.Tick += new System.EventHandler(this.GeschenkeAusgeteiltTimer_Tick);
+            // 
+            // ZeitÜbrigTimer
+            // 
+            this.ZeitÜbrigTimer.Interval = 1000;
+            this.ZeitÜbrigTimer.Tick += new System.EventHandler(this.ZeitÜbrigTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,6 +587,8 @@
             this.Text = "IS_Kran_Facharbeit";
             this.KransteuerungPnl.ResumeLayout(false);
             this.KransteuerungPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).EndInit();
             this.ProgrammsteuerungPnl.ResumeLayout(false);
             this.KranPnl.ResumeLayout(false);
             this.KranPnl.PerformLayout();
@@ -598,8 +600,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImgPictureBx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabletPictureBx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tablet_OFFPictureBx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).EndInit();
             this.ResumeLayout(false);
 
         }

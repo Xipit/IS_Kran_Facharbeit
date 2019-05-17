@@ -45,6 +45,7 @@
             this.ZuruecksetzenBtn = new System.Windows.Forms.Button();
             this.SchliessenBtn = new System.Windows.Forms.Button();
             this.KranPnl = new System.Windows.Forms.Panel();
+            this.TimerLbl = new System.Windows.Forms.Label();
             this.WeihnachtsmannInfoLbl2 = new System.Windows.Forms.Label();
             this.WeihnachtsmannInfoLbl = new System.Windows.Forms.Label();
             this.LaufkatzenSeil3Btn = new System.Windows.Forms.Button();
@@ -64,7 +65,6 @@
             this.LastFallTimer = new System.Windows.Forms.Timer(this.components);
             this.GeschenkeAusgeteiltTimer = new System.Windows.Forms.Timer(this.components);
             this.ZeitÜbrigTimer = new System.Windows.Forms.Timer(this.components);
-            this.TimerLbl = new System.Windows.Forms.Label();
             this.KransteuerungPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NokiaBootAnimPictureBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NokiaSmartphonePictureBx)).BeginInit();
@@ -111,7 +111,7 @@
             // 
             // LastGreifenBtn
             // 
-            this.LastGreifenBtn.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.locked;
+            this.LastGreifenBtn.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources.unlocked;
             this.LastGreifenBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LastGreifenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LastGreifenBtn.FlatAppearance.BorderSize = 0;
@@ -133,7 +133,6 @@
             this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // NokiaAnAus
             // 
@@ -304,6 +303,16 @@
             this.KranPnl.Size = new System.Drawing.Size(834, 599);
             this.KranPnl.TabIndex = 2;
             // 
+            // TimerLbl
+            // 
+            this.TimerLbl.AutoSize = true;
+            this.TimerLbl.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimerLbl.Location = new System.Drawing.Point(521, 226);
+            this.TimerLbl.Name = "TimerLbl";
+            this.TimerLbl.Size = new System.Drawing.Size(215, 34);
+            this.TimerLbl.TabIndex = 12;
+            this.TimerLbl.Text = "Der Weihnachtsmann fährt in\r\n30 Sekunden los!";
+            // 
             // WeihnachtsmannInfoLbl2
             // 
             this.WeihnachtsmannInfoLbl2.AutoSize = true;
@@ -468,16 +477,6 @@
             // 
             this.ZeitÜbrigTimer.Interval = 1000;
             this.ZeitÜbrigTimer.Tick += new System.EventHandler(this.ZeitÜbrigTimer_Tick);
-            // 
-            // TimerLbl
-            // 
-            this.TimerLbl.AutoSize = true;
-            this.TimerLbl.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimerLbl.Location = new System.Drawing.Point(521, 226);
-            this.TimerLbl.Name = "TimerLbl";
-            this.TimerLbl.Size = new System.Drawing.Size(215, 34);
-            this.TimerLbl.TabIndex = 12;
-            this.TimerLbl.Text = "Der Weihnachtsmann fährt in\r\n30 Sekunden los!";
             // 
             // Form1
             // 

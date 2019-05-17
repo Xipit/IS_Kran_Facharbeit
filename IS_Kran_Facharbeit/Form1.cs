@@ -193,7 +193,7 @@ namespace IS_Kran_Facharbeit
         #region//Bewegung
         void Laufkatzebewegen (Point bewegung)
         {
-            //Diese Funktion wird in LaufkatzeBewegungsTimer_Tick gecallt und führt somit alle par millisekunden diesen code aus
+            //Diese Funktion wird in LaufkatzeBewegungsTimer_Tick gecallt und führt somit alle paar millisekunden diesen code aus
             //Der Point laufkatzeBewegungsrichtung wird durch die Bewegungs Buttons im Smartphone abgeändert
             //Diese befinden sich in den Regionen "Bewegung starten" und "Bewegung stoppen"
             if(nokiaAnim == false && nokiaAngeschaltet == true)

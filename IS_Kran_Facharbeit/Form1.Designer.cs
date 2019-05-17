@@ -125,7 +125,7 @@
             this.Geschwindigkeit3Btn.FlatAppearance.BorderSize = 0;
             this.Geschwindigkeit3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Geschwindigkeit3Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Geschwindigkeit3Btn.Location = new System.Drawing.Point(170, 225);
+            this.Geschwindigkeit3Btn.Location = new System.Drawing.Point(170, 230);
             this.Geschwindigkeit3Btn.Name = "Geschwindigkeit3Btn";
             this.Geschwindigkeit3Btn.Size = new System.Drawing.Size(50, 50);
             this.Geschwindigkeit3Btn.TabIndex = 10;
@@ -142,7 +142,7 @@
             this.Geschwindigkeit2Btn.FlatAppearance.BorderSize = 0;
             this.Geschwindigkeit2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Geschwindigkeit2Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Geschwindigkeit2Btn.Location = new System.Drawing.Point(120, 225);
+            this.Geschwindigkeit2Btn.Location = new System.Drawing.Point(120, 230);
             this.Geschwindigkeit2Btn.Name = "Geschwindigkeit2Btn";
             this.Geschwindigkeit2Btn.Size = new System.Drawing.Size(50, 50);
             this.Geschwindigkeit2Btn.TabIndex = 9;
@@ -159,7 +159,7 @@
             this.Geschwindigkeit1Btn.FlatAppearance.BorderSize = 0;
             this.Geschwindigkeit1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Geschwindigkeit1Btn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Geschwindigkeit1Btn.Location = new System.Drawing.Point(71, 225);
+            this.Geschwindigkeit1Btn.Location = new System.Drawing.Point(71, 230);
             this.Geschwindigkeit1Btn.Name = "Geschwindigkeit1Btn";
             this.Geschwindigkeit1Btn.Size = new System.Drawing.Size(50, 50);
             this.Geschwindigkeit1Btn.TabIndex = 8;
@@ -530,7 +530,7 @@
             // LaufkatzeBewegungTimer
             // 
             this.LaufkatzeBewegungTimer.Enabled = true;
-            this.LaufkatzeBewegungTimer.Interval = 20;
+            this.LaufkatzeBewegungTimer.Interval = 15;
             this.LaufkatzeBewegungTimer.Tick += new System.EventHandler(this.BewegungTimer_Tick);
             // 
             // NokiaPowerImgList

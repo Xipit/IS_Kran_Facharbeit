@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.KransteuerungPnl = new System.Windows.Forms.Panel();
             this.NokiaBootAnimPictureBx = new System.Windows.Forms.PictureBox();
+            this.Geschwindigkeit3Btn = new System.Windows.Forms.Button();
+            this.Geschwindigkeit2Btn = new System.Windows.Forms.Button();
+            this.Geschwindigkeit1Btn = new System.Windows.Forms.Button();
             this.LastGreifenBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.NokiaAnAus = new System.Windows.Forms.Button();
@@ -45,6 +48,7 @@
             this.ZuruecksetzenBtn = new System.Windows.Forms.Button();
             this.SchliessenBtn = new System.Windows.Forms.Button();
             this.KranPnl = new System.Windows.Forms.Panel();
+            this.NeuerVersuchBtn = new System.Windows.Forms.Button();
             this.TimerLbl = new System.Windows.Forms.Label();
             this.WeihnachtsmannInfoLbl2 = new System.Windows.Forms.Label();
             this.WeihnachtsmannInfoLbl = new System.Windows.Forms.Label();
@@ -83,6 +87,9 @@
             // 
             this.KransteuerungPnl.BackColor = System.Drawing.Color.Transparent;
             this.KransteuerungPnl.Controls.Add(this.NokiaBootAnimPictureBx);
+            this.KransteuerungPnl.Controls.Add(this.Geschwindigkeit3Btn);
+            this.KransteuerungPnl.Controls.Add(this.Geschwindigkeit2Btn);
+            this.KransteuerungPnl.Controls.Add(this.Geschwindigkeit1Btn);
             this.KransteuerungPnl.Controls.Add(this.LastGreifenBtn);
             this.KransteuerungPnl.Controls.Add(this.label1);
             this.KransteuerungPnl.Controls.Add(this.NokiaAnAus);
@@ -101,13 +108,64 @@
             this.NokiaBootAnimPictureBx.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.NokiaBootAnimPictureBx.Enabled = false;
             this.NokiaBootAnimPictureBx.Image = ((System.Drawing.Image)(resources.GetObject("NokiaBootAnimPictureBx.Image")));
-            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(47, 200);
+            this.NokiaBootAnimPictureBx.Location = new System.Drawing.Point(46, 197);
             this.NokiaBootAnimPictureBx.Name = "NokiaBootAnimPictureBx";
             this.NokiaBootAnimPictureBx.Size = new System.Drawing.Size(200, 363);
             this.NokiaBootAnimPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NokiaBootAnimPictureBx.TabIndex = 0;
             this.NokiaBootAnimPictureBx.TabStop = false;
             this.NokiaBootAnimPictureBx.Visible = false;
+            // 
+            // Geschwindigkeit3Btn
+            // 
+            this.Geschwindigkeit3Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Geschwindigkeit3Btn.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources._3x;
+            this.Geschwindigkeit3Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Geschwindigkeit3Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Geschwindigkeit3Btn.FlatAppearance.BorderSize = 0;
+            this.Geschwindigkeit3Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Geschwindigkeit3Btn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Geschwindigkeit3Btn.Location = new System.Drawing.Point(170, 225);
+            this.Geschwindigkeit3Btn.Name = "Geschwindigkeit3Btn";
+            this.Geschwindigkeit3Btn.Size = new System.Drawing.Size(50, 50);
+            this.Geschwindigkeit3Btn.TabIndex = 10;
+            this.Geschwindigkeit3Btn.UseVisualStyleBackColor = false;
+            this.Geschwindigkeit3Btn.Visible = false;
+            this.Geschwindigkeit3Btn.Click += new System.EventHandler(this.Geschwindigkeit3Btn_Click);
+            // 
+            // Geschwindigkeit2Btn
+            // 
+            this.Geschwindigkeit2Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Geschwindigkeit2Btn.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources._2x;
+            this.Geschwindigkeit2Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Geschwindigkeit2Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Geschwindigkeit2Btn.FlatAppearance.BorderSize = 0;
+            this.Geschwindigkeit2Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Geschwindigkeit2Btn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Geschwindigkeit2Btn.Location = new System.Drawing.Point(120, 225);
+            this.Geschwindigkeit2Btn.Name = "Geschwindigkeit2Btn";
+            this.Geschwindigkeit2Btn.Size = new System.Drawing.Size(50, 50);
+            this.Geschwindigkeit2Btn.TabIndex = 9;
+            this.Geschwindigkeit2Btn.UseVisualStyleBackColor = false;
+            this.Geschwindigkeit2Btn.Visible = false;
+            this.Geschwindigkeit2Btn.Click += new System.EventHandler(this.Geschwindigkeit2Btn_Click);
+            // 
+            // Geschwindigkeit1Btn
+            // 
+            this.Geschwindigkeit1Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Geschwindigkeit1Btn.BackgroundImage = global::IS_Kran_Facharbeit.Properties.Resources._1x;
+            this.Geschwindigkeit1Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Geschwindigkeit1Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Geschwindigkeit1Btn.FlatAppearance.BorderSize = 0;
+            this.Geschwindigkeit1Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Geschwindigkeit1Btn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Geschwindigkeit1Btn.Location = new System.Drawing.Point(71, 225);
+            this.Geschwindigkeit1Btn.Name = "Geschwindigkeit1Btn";
+            this.Geschwindigkeit1Btn.Size = new System.Drawing.Size(50, 50);
+            this.Geschwindigkeit1Btn.TabIndex = 8;
+            this.Geschwindigkeit1Btn.UseVisualStyleBackColor = false;
+            this.Geschwindigkeit1Btn.Visible = false;
+            this.Geschwindigkeit1Btn.Click += new System.EventHandler(this.Geschwindigkeit1Btn_Click);
             // 
             // LastGreifenBtn
             // 
@@ -253,16 +311,23 @@
             // 
             // InfoBtn
             // 
+            this.InfoBtn.BackColor = System.Drawing.Color.White;
+            this.InfoBtn.Cursor = System.Windows.Forms.Cursors.Help;
+            this.InfoBtn.FlatAppearance.BorderSize = 2;
+            this.InfoBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.InfoBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.InfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.InfoBtn.Location = new System.Drawing.Point(264, 21);
             this.InfoBtn.Name = "InfoBtn";
             this.InfoBtn.Size = new System.Drawing.Size(75, 23);
             this.InfoBtn.TabIndex = 2;
             this.InfoBtn.Text = "Info";
-            this.InfoBtn.UseVisualStyleBackColor = true;
+            this.InfoBtn.UseVisualStyleBackColor = false;
             this.InfoBtn.Click += new System.EventHandler(this.InfoBtn_Click);
             // 
             // ZuruecksetzenBtn
             // 
+            this.ZuruecksetzenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ZuruecksetzenBtn.Location = new System.Drawing.Point(140, 21);
             this.ZuruecksetzenBtn.Name = "ZuruecksetzenBtn";
             this.ZuruecksetzenBtn.Size = new System.Drawing.Size(81, 23);
@@ -273,6 +338,7 @@
             // 
             // SchliessenBtn
             // 
+            this.SchliessenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SchliessenBtn.Location = new System.Drawing.Point(26, 21);
             this.SchliessenBtn.Name = "SchliessenBtn";
             this.SchliessenBtn.Size = new System.Drawing.Size(75, 23);
@@ -285,6 +351,7 @@
             // 
             this.KranPnl.BackColor = System.Drawing.Color.Transparent;
             this.KranPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.KranPnl.Controls.Add(this.NeuerVersuchBtn);
             this.KranPnl.Controls.Add(this.TimerLbl);
             this.KranPnl.Controls.Add(this.WeihnachtsmannInfoLbl2);
             this.KranPnl.Controls.Add(this.WeihnachtsmannInfoLbl);
@@ -302,6 +369,19 @@
             this.KranPnl.Name = "KranPnl";
             this.KranPnl.Size = new System.Drawing.Size(834, 599);
             this.KranPnl.TabIndex = 2;
+            // 
+            // NeuerVersuchBtn
+            // 
+            this.NeuerVersuchBtn.Enabled = false;
+            this.NeuerVersuchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NeuerVersuchBtn.Location = new System.Drawing.Point(521, 359);
+            this.NeuerVersuchBtn.Name = "NeuerVersuchBtn";
+            this.NeuerVersuchBtn.Size = new System.Drawing.Size(232, 23);
+            this.NeuerVersuchBtn.TabIndex = 13;
+            this.NeuerVersuchBtn.Text = "Nochmal probieren";
+            this.NeuerVersuchBtn.UseVisualStyleBackColor = true;
+            this.NeuerVersuchBtn.Visible = false;
+            this.NeuerVersuchBtn.Click += new System.EventHandler(this.NeuerVersuchBtn_Click);
             // 
             // TimerLbl
             // 
@@ -450,7 +530,7 @@
             // LaufkatzeBewegungTimer
             // 
             this.LaufkatzeBewegungTimer.Enabled = true;
-            this.LaufkatzeBewegungTimer.Interval = 15;
+            this.LaufkatzeBewegungTimer.Interval = 20;
             this.LaufkatzeBewegungTimer.Tick += new System.EventHandler(this.BewegungTimer_Tick);
             // 
             // NokiaPowerImgList
@@ -547,6 +627,10 @@
         private System.Windows.Forms.Label WeihnachtsmannInfoLbl2;
         private System.Windows.Forms.Timer ZeitÜbrigTimer;
         private System.Windows.Forms.Label TimerLbl;
+        private System.Windows.Forms.Button NeuerVersuchBtn;
+        private System.Windows.Forms.Button Geschwindigkeit1Btn;
+        private System.Windows.Forms.Button Geschwindigkeit3Btn;
+        private System.Windows.Forms.Button Geschwindigkeit2Btn;
     }
 }
 

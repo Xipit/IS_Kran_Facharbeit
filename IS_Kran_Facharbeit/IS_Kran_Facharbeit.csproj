@@ -101,6 +101,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1x.png" />
+    <Content Include="Resources\2x.png" />
+    <Content Include="Resources\3x.png" />
     <Content Include="Resources\an.jpg" />
     <Content Include="Resources\aus.jpg" />
     <None Include="Resources\WeihnachtsmannFertig.jpg" />

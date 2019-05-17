@@ -107,13 +107,7 @@ namespace IS_Kran_Facharbeit
 
         private void ZuruecksetzenBtn_Click(object sender, EventArgs e)
         {
-            lastGegriffen = false;
-            laufkatzePosition = new Point(250, 155);
-            LastPictureBx.Location = new Point(296, 493);
-            WeihnachtsmannPictureBox.Location = new Point(400, 449);
-            sekundenÜbrig = 30;
-            weihnachtsmannLosgefahren = false;
-            ZeitÜbrigTimer.Enabled = true;
+            FormZuruecksetzen();
         }
 
         private void InfoBtn_Click(object sender, EventArgs e)
@@ -137,6 +131,9 @@ namespace IS_Kran_Facharbeit
             LaufkatzeRechtsBtn.Visible = true;
             LaufkatzeUntenBtn.Visible = true;
             LastGreifenBtn.Visible = true;
+            Geschwindigkeit1Btn.Visible = true;
+            Geschwindigkeit2Btn.Visible = true;
+            Geschwindigkeit3Btn.Visible = true;
         }
         void SetLaufkatzeButtonsNotVisible()
         {
@@ -145,6 +142,9 @@ namespace IS_Kran_Facharbeit
             LaufkatzeRechtsBtn.Visible = false;
             LaufkatzeUntenBtn.Visible = false;
             LastGreifenBtn.Visible = false;
+            Geschwindigkeit1Btn.Visible = false;
+            Geschwindigkeit2Btn.Visible = false;
+            Geschwindigkeit3Btn.Visible = false;
         }
         #endregion
 
@@ -181,6 +181,28 @@ namespace IS_Kran_Facharbeit
 
             LaufkatzenElementeBewegen();
         }
+
+        #region//GeschindigkeitÄndern
+        void LaufkatzeBewegungsTimerIntervalÄndern(int neuerInterval)
+        {
+            LaufkatzeBewegungTimer.Interval = neuerInterval;
+        }
+
+        private void Geschwindigkeit1Btn_Click(object sender, EventArgs e)
+        {
+            LaufkatzeBewegungsTimerIntervalÄndern(25);
+        }
+
+        private void Geschwindigkeit2Btn_Click(object sender, EventArgs e)
+        {
+            LaufkatzeBewegungsTimerIntervalÄndern(20);
+        }
+
+        private void Geschwindigkeit3Btn_Click(object sender, EventArgs e)
+        {
+            LaufkatzeBewegungsTimerIntervalÄndern(5);
+        }
+        #endregion
 
         #region//Bewegung starten
         private void LaufkatzeLinksButton_MouseDown(object sender, MouseEventArgs e)
@@ -326,21 +348,21 @@ namespace IS_Kran_Facharbeit
                 }
             }
 
-                //Schlittenhinten
-                if (ImBereich(Objekt, new Point(400, 450), 1, 100, 20, 18))
-                {
-                    return false;
-                }
-                //Schlittenboden
-                if (ImBereich(Objekt, new Point(440, 460), 3, 100, 50, 25))
-                {
-                    return false;
-                }
-                //Weihnachtsmann
-                if (ImBereich(Objekt, new Point(460, 440), 16, 100, 36, 20))
-                {
-                    return false;
-                }
+            //Schlittenhinten
+            if (ImBereich(Objekt, new Point(400, 450), 1, 100, 20, 18))
+            {
+                return false;
+            }
+            //Schlittenboden
+            if (ImBereich(Objekt, new Point(440, 460), 3, 100, 50, 25))
+            {
+                return false;
+            }
+            //Weihnachtsmann
+            if (ImBereich(Objekt, new Point(460, 440), 16, 100, 36, 20))
+            {
+                return false;
+            }
             
 
             return true;
@@ -396,6 +418,10 @@ namespace IS_Kran_Facharbeit
                         sekundenÜbrig = 5;
                 }
             }
+            else if(geschenkGebracht == true)
+            {
+                WeihnachtsmannInfoLbl2.Text = "Super!, du bist eine große Hilfe \nfür den Weihnachtsmann!";
+            }
             else
             {
                 WeihnachtsmannInfoLbl2.Text = "";
@@ -409,10 +435,6 @@ namespace IS_Kran_Facharbeit
             }
         }
 
-        void WeihnachtsmannFahrt()
-        {
-
-        }
 
         private void ZeitÜbrigTimer_Tick(object sender, EventArgs e)
         {
@@ -428,14 +450,40 @@ namespace IS_Kran_Facharbeit
                 {
                     ZeitÜbrigTimer.Enabled = false;
                     weihnachtsmannLosgefahren = true;
+                    TimerLbl.Text = "Der Weihnachtsmann ist \nlosgefahren!";
+                    NeuerVersuchBtn.Enabled = true;
+                    NeuerVersuchBtn.Visible = true;
                 }
                 else
                 {
                     ZeitÜbrigTimer.Enabled = false;
-                    TimerLbl.Text = "Due hast es nicht geschafft dem \nWeihnachtsmann sein Geschenk \nzu bringen. :(";
+                    TimerLbl.Text = "Du hast es nicht geschafft dem\nWeihnachtsmann sein Geschenk\nzu bringen. :(";
+                    NeuerVersuchBtn.Enabled = true;
+                    NeuerVersuchBtn.Visible = true;
                 }
 
             }
         }
+
+        void FormZuruecksetzen()
+        {
+            lastGegriffen = false;
+            laufkatzePosition = new Point(250, 155);
+            LastPictureBx.Location = new Point(296, 493);
+            WeihnachtsmannPictureBox.Location = new Point(400, 449);
+            sekundenÜbrig = 30;
+            weihnachtsmannLosgefahren = false;
+            ZeitÜbrigTimer.Enabled = true;
+
+            NeuerVersuchBtn.Enabled = false;
+            NeuerVersuchBtn.Visible = false;
+        }
+
+        private void NeuerVersuchBtn_Click(object sender, EventArgs e)
+        {
+            FormZuruecksetzen();
+            TimerLbl.Text = "Der Weihnachtsmann fährt in \n30 Sekunden los!";
+        }
+
     }
 }

@@ -121,8 +121,11 @@
   <data name="crane-clipart-crane-hook-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crane-clipart-crane-hook-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="leftrightbuttons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leftrightbuttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="haken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\haken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Weihnachtsmann" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Weihnachtsmann.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="last" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\last.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,11 +136,11 @@
   <data name="leftrightbuttons2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leftrightbuttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weihnachtsmann" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Weihnachtsmann.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Quadrat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Quadrat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unlocked.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,23 +151,20 @@
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Nokia Smartphone-OFF2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nokia Smartphone-OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Nokia Smartphone-OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nokia Smartphone-OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kran" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kran1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kran1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kran1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WeihnachtsmannFertig" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WeihnachtsmannFertig.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tablet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tablet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="aus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kran1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kran1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\locked.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +181,11 @@
   <data name="crane-clipart-crane-hook-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crane-clipart-crane-hook-6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="haken" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\haken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="leftrightbuttons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftrightbuttons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nokia Smartphone-OFF2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nokia Smartphone-OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="crane-clipart-crane-hook-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crane-clipart-crane-hook-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +193,13 @@
   <data name="rechteck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rechteck.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WeihnachtsmannFertig" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WeihnachtsmannFertig.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
